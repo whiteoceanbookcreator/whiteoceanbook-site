@@ -44,8 +44,7 @@
         "height": 512
       },
       "image": "https://whiteoceanbook.com/logo-512.png",
-      "email": "support@whiteoceanbook.com",
-      "telephone": "+91-88753-59326"
+      "email": "support@whiteoceanbook.com"
     },
     {
       "@type": "WebSite",
@@ -80,17 +79,17 @@
     --navy-deep: #0D1429;
     --blue: #2A4A93;
     --blue-soft: #E7EBF4;
-    --amber: #BE7F24;
+    --amber: #ffcb1f;
     --bg: #E1E9E3;
     --surface: #FDFDFC;
     --text: #131A2B;
-    --muted: #5C6879;
-    --border: #D9E1E7;
+    --muted: #6f7d90;
+    --border: #bccbd7;
     --green-bg: #DCE8DC;
-    --green: #006400;
-    --green-bright: #1E8B1E;
+    --green: #116a11;
+    --green-bright: #00a900;
     --radius: 18px;
-    --shadow: 0 10px 26px rgba(13, 20, 41, 0.10);
+    --shadow: 0 10px 26px rgba(6, 11, 26, 0.1);
 }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -119,6 +118,25 @@
   .nav-links { display: flex; gap: 24px; font-size: 14px; font-weight: 600; color: var(--navy); }
   .nav-links a:hover { color: var(--blue); }
   @media (max-width: 820px) { .nav-links { display: none; } }
+
+  /* HERO PLAY STORE BADGE */
+  .btn-nav {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--amber); color: #3a2a00;
+    font-family: 'Plus Jakarta Sans'; font-weight: 700; font-size: 13.5px;
+    padding: 9px 18px; border-radius: 999px; white-space: nowrap;
+    transition: transform .12s ease, opacity .12s;
+  }
+  .btn-nav:hover { opacity: .92; }
+  .btn-nav:active { transform: scale(0.96); }
+  .btn-nav .short { display: none; }
+  .play-ico { width: 13px; height: 15px; margin-right: 8px; flex-shrink: 0; }
+  .hero-badge { position: relative; z-index: 2; margin-bottom: 20px; }
+  @media (max-width: 480px) {
+    .btn-nav { font-size: 12.5px; padding: 8px 14px; }
+    .play-ico { width: 12px; height: 14px; margin-right: 6px; }
+    .brand { font-size: 16px; }
+  }
 
   /* HERO */
   header.hero { padding: 60px 0 50px; }
@@ -186,7 +204,7 @@
   .tree-card::after {
     content: ""; position: absolute; left: -100px; bottom: -120px;
     width: 320px; height: 320px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(34,197,94,0.30), transparent 70%);
+    background: radial-gradient(circle, rgba(8, 143, 22, 0.3), transparent 70%);
   }
   .tree-card .eyebrow { color: var(--green-bright); }
   .tree-card p.lede { color: rgba(255,255,255,0.85); margin-top: 14px; max-width: 640px; font-size: 16px; position: relative; z-index: 2; }
@@ -197,7 +215,7 @@
   .tree-list div { display: flex; align-items: flex-start; gap: 10px; color: rgba(255,255,255,0.9); font-size: 15px; }
   .tree-list .tick { color: var(--green-bright); font-weight: 800; flex-shrink: 0; }
   .tree-callout {
-    margin-top: 28px; background: rgba(34,197,94,0.14); border: 1px solid rgba(34,197,94,0.42);
+    margin-top: 28px; background: rgba(57, 189, 28, 0.14); border: 1px solid rgba(34,197,94,0.42);
     border-radius: 16px; padding: 20px 22px; position: relative; z-index: 2;
   }
   .tree-callout b { color: #BBF7D0; font-family: 'Plus Jakarta Sans'; font-size: 16px; }
@@ -292,6 +310,12 @@
       <div class="hero-logo">WO</div>
       <span>WhiteOceanBook</span>
     </div>
+    <a href="https://play.google.com/store/apps/details?id=com.whiteoceanbook.app" class="btn-nav hero-badge" target="_blank" rel="noopener">
+      <svg class="play-ico" viewBox="0 0 14 16" fill="none" aria-hidden="true">
+        <path d="M1 1.5v13a1 1 0 0 0 1.5.87l11-6.5a1 1 0 0 0 0-1.74l-11-6.5A1 1 0 0 0 1 1.5z" fill="currentColor"/>
+      </svg>
+      <span class="full">Get it on Play Store</span>
+    </a>
     <h1>Master English vocabulary for SSC, Banking &amp; competitive exams.</h1>
     <div class="sub">English Vocabulary · SSC &amp; Others</div>
     <div class="stat">20,000+ Questions · inspired by PYQs</div>
@@ -341,7 +365,7 @@
     <div class="tree-callout">
       <b>🌳 Grow a real tree with your name </b>
       <p>Complete a 5-hour focus session, then send us a screenshot along with your name at
-        <a href="mailto:whiteoceanbook@gmail.com">whiteoceanbook@gmail.com</a> — we will plant a real tree in your name.</p>
+        <a href="mailto:support@whiteoceanbook.com">support@whiteoceanbook.com</a> — we will plant a real tree in your name.</p>
     </div>
 
     <div class="tree-tagline">Focus more. Grow more.</div>
@@ -426,7 +450,7 @@
   <div class="eyebrow">Your data</div>
   <h2 class="section-title">Privacy Policy</h2>
   <div class="privacy" style="margin-top:22px">
-    <p class="updated">Last updated: 11 July 2026</p>
+    <p class="updated">Last updated: 28 sept 2026</p>
     <p style="margin-top:12px">WhiteOceanBook does <strong>not collect any personal data</strong>. No account is needed, and your quiz progress, bookmarks, focus sessions and settings are saved only on your own device — they never leave your phone. All app data is permanently deleted when you uninstall the app or use Clear Data from App info. The current version of the app shows <strong>no advertisements</strong> and uses no third-party tracking.</p>
     <p style="margin-top:12px">Read the complete policy here:</p>
     <p style="margin-top:10px"><a href="/privacy-policy.html" style="display:inline-block;background:var(--navy);color:#fff;font-weight:700;font-family:'Plus Jakarta Sans';padding:12px 22px;border-radius:999px;font-size:15px">Read Full Privacy Policy</a></p>
@@ -441,10 +465,6 @@
     <div class="contact-card">
       <div class="label">Email</div>
       <a href="mailto:support@whiteoceanbook.com">support@whiteoceanbook.com</a>
-    </div>
-    <div class="contact-card">
-      <div class="label">Phone</div>
-      <a href="tel:+918875359326">+91 88753 59326</a>
     </div>
     <div class="contact-card">
       <div class="label">Website</div>
