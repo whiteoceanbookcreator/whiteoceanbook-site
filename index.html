@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>WhiteOceanBook — English Vocabulary for SSC &amp; Banking</title>
 <meta name="description" content="WhiteOceanBook — offline English vocabulary app for SSC, Banking & competitive exams. 20,000+ questions inspired by PYQs, with detailed solutions and a Focus Tree study timer." />
-<meta name="theme-color" content="#15173D" />
+<meta name="theme-color" content="#F7F6F2" />
 <link rel="canonical" href="https://whiteoceanbook.com/" />
 
 <!-- ===== ICON (search result & browser tab) ===== -->
@@ -26,7 +26,7 @@
 <meta name="twitter:title" content="WhiteOceanBook — English Vocabulary for SSC &amp; Banking" />
 <meta name="twitter:image" content="https://whiteoceanbook.com/logo-512.png" />
 
-<!-- ===== STRUCTURED DATA — logo instead of the globe ===== -->
+<!-- ===== STRUCTURED DATA ===== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -72,414 +72,800 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
- :root {
-    --navy: #16203F;
-    --navy-deep: #0D1429;
-    --blue: #2A4A93;
-    --blue-soft: #E7EBF4;
-    --amber: #F9AB01;
-    --bg: #E1E9E3;
-    --surface: #FDFDFC;
-    --text: #131A2B;
-    --muted: #6f7d90;
-    --border: #bccbd7;
-    --green-bg: #DCE8DC;
-    --green: #116a11;
-    --green-bright: #00a900;
+  :root {
+    --paper: #F7F6F2;
+    --paper-2: #F1EFE9;
+    --surface: #FFFFFF;
+    --ink: #1A2033;
+    --ink-2: #3A4157;
+    --muted: #6B7184;
+    --line: #E4E1D9;
+    --line-2: #D6D2C8;
+    --accent: #2D4A86;
+    --accent-soft: #ECEFF6;
+    --gold: #C2953A;
+    --star-empty: #E2DED4;
+    --sage: #EEF2EB;
+    --sage-line: #D8E1D3;
+    --green: #3D6A47;
     --radius: 18px;
-    --shadow: 0 10px 26px rgba(6, 11, 26, 0.1);
-}
+    --serif: 'Newsreader', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+    --sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --shadow-sm: 0 1px 2px rgba(26, 32, 51, 0.05);
+    --shadow-lg: 0 1px 2px rgba(26, 32, 51, 0.04), 0 22px 44px -26px rgba(26, 32, 51, 0.28);
+  }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: 'Inter', system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text);
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
-  h1, h2, h3, .display { font-family: 'Plus Jakarta Sans', sans-serif; }
-  .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
   a { color: inherit; text-decoration: none; }
+  .wrap { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  main, nav, footer { position: relative; z-index: 1; }
 
-  /* NAV */
+  /* ========== BACKGROUND VOCAB WORDS ========== */
+  .vocab-bg {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: space-around;
+    padding: 40px 0;
+  }
+  .vocab-row { display: flex; width: max-content; white-space: nowrap; will-change: transform; }
+  .vocab-row span { padding: 0 34px; color: rgba(26, 32, 51, 0.055); }
+  .vocab-row .w { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 40px; }
+  .vocab-row .p { font-family: var(--sans); font-weight: 700; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(26, 32, 51, 0.07); align-self: center; }
+  .vocab-row.left  { animation: slideLeft var(--dur, 120s) linear infinite; }
+  .vocab-row.right { animation: slideRight var(--dur, 120s) linear infinite; }
+  @keyframes slideLeft  { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes slideRight { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+  /* ========== NAV ========== */
   nav {
     position: sticky; top: 0; z-index: 50;
-    background: rgba(221,234,229,0.85);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(21,23,61,0.06);
+    background: rgba(247, 246, 242, 0.88);
+    backdrop-filter: saturate(1.2) blur(12px);
+    -webkit-backdrop-filter: saturate(1.2) blur(12px);
+    border-bottom: 1px solid var(--line);
   }
-  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; font-family: 'Plus Jakarta Sans'; }
-  .logo { width: 34px; height: 34px; border-radius: 9px; background: #fff; color: var(--blue);
-    display: grid; place-items: center; font-weight: 800; font-size: 13px; border: 1px solid var(--border); }
-  .nav-links { display: flex; gap: 24px; font-size: 14px; font-weight: 600; color: var(--navy); }
-  .nav-links a:hover { color: var(--blue); }
-  @media (max-width: 820px) { .nav-links { display: none; } }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 20px; }
+  .brand { display: flex; align-items: center; gap: 11px; font-family: var(--serif); font-weight: 600; font-size: 21px; letter-spacing: -0.01em; }
+  .mark {
+    width: 32px; height: 32px; border-radius: 8px; background: var(--ink); color: #fff;
+    display: grid; place-items: center; font-family: var(--sans); font-weight: 800; font-size: 11.5px; letter-spacing: 0.04em;
+  }
+  .nav-links { display: flex; gap: 26px; font-size: 14px; font-weight: 600; color: var(--ink-2); }
+  .nav-links a { position: relative; padding: 4px 0; }
+  .nav-links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 1px; background: var(--ink); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+  .nav-cta {
+    display: inline-flex; align-items: center; gap: 8px; background: var(--ink); color: #fff;
+    font-weight: 700; font-size: 13.5px; padding: 9px 16px; border-radius: 999px; white-space: nowrap;
+    transition: background .2s ease, transform .12s ease;
+  }
+  .nav-cta:hover { background: #2A3250; }
+  .nav-cta:active { transform: scale(0.97); }
+  .play-ico { width: 12px; height: 14px; flex-shrink: 0; }
+  @media (max-width: 1000px) { .nav-links { display: none; } }
+  @media (max-width: 420px) { .brand { font-size: 18px; } .nav-cta { font-size: 12.5px; padding: 8px 13px; } }
 
-  /* HERO PLAY STORE BADGE */
-  .btn-nav {
-    display: inline-flex; align-items: center; justify-content: center;
-    background: var(--amber); color: #3a2a00;
-    font-family: 'Plus Jakarta Sans'; font-weight: 700; font-size: 13.5px;
-    padding: 9px 18px; border-radius: 999px; white-space: nowrap;
-    transition: transform .12s ease, opacity .12s;
+  /* ========== COMMON ========== */
+  .kicker {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--accent); font-weight: 700; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
   }
-  .btn-nav:hover { opacity: .92; }
-  .btn-nav:active { transform: scale(0.96); }
-  .btn-nav .short { display: none; }
-  .play-ico { width: 13px; height: 15px; margin-right: 8px; flex-shrink: 0; }
-  .hero-badge { position: relative; z-index: 2; margin-bottom: 20px; }
-  @media (max-width: 480px) {
-    .btn-nav { font-size: 12.5px; padding: 8px 14px; }
-    .play-ico { width: 12px; height: 14px; margin-right: 6px; }
-    .brand { font-size: 16px; }
+  .kicker::before { content: ""; width: 22px; height: 1px; background: currentColor; }
+  section { padding: 84px 0; }
+  .section-title {
+    font-family: var(--serif); font-weight: 500; font-size: clamp(30px, 3.8vw, 46px);
+    line-height: 1.1; letter-spacing: -0.018em; margin-top: 14px; color: var(--ink);
   }
+  .section-title em { font-style: italic; color: var(--accent); }
+  .section-intro { color: var(--muted); margin-top: 14px; max-width: 600px; font-size: 16.5px; }
+  .tick-ico { width: 16px; height: 16px; flex-shrink: 0; margin-top: 4px; }
 
-  /* HERO */
-  header.hero { padding: 60px 0 50px; }
-  .hero-card {
-    background: var(--navy);
-    border-radius: 26px;
-    padding: 48px 40px;
-    color: #fff;
-    box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
-  }
-  .hero-card::after {
-    content: ""; position: absolute; right: -80px; top: -80px;
-    width: 260px; height: 260px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(29,78,216,0.35), transparent 70%);
-  }
-  .hero-brand { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
-  .hero-logo { width: 52px; height: 52px; border-radius: 14px; background: #fff; color: var(--blue);
-    display: grid; place-items: center; font-weight: 800; font-size: 19px; }
-  .hero-brand span { font-size: 26px; font-weight: 800; font-family: 'Plus Jakarta Sans'; }
-  .hero h1 { font-size: clamp(28px, 5vw, 46px); line-height: 1.15; font-weight: 800; max-width: 640px; }
-  .hero .sub { color: var(--amber); font-weight: 700; margin-top: 16px; font-size: 16px; letter-spacing: .2px; }
-  .hero .stat { color: var(--amber); font-weight: 700; font-size: 16px; margin-top: 2px; }
-  .hero p.lede { color: rgba(255,255,255,0.82); margin-top: 18px; max-width: 560px; font-size: 16px; }
-  .hero-new {
-    display: inline-flex; align-items: center; gap: 8px; margin-top: 22px;
-    background: rgba(34,197,94,0.16); border: 1px solid rgba(34,197,94,0.4);
-    color: #BBF7D0; font-weight: 700; font-size: 14px;
-    padding: 8px 16px; border-radius: 999px; font-family: 'Plus Jakarta Sans';
-  }
-  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 26px; }
   .btn {
-    display: inline-flex; align-items: center; gap: 9px;
+    display: inline-flex; align-items: center; gap: 10px;
     padding: 14px 24px; border-radius: 999px; font-weight: 700; font-size: 15px;
-    font-family: 'Plus Jakarta Sans'; cursor: pointer; border: none; transition: transform .12s ease, opacity .12s;
+    font-family: var(--sans); cursor: pointer; border: 1px solid transparent;
+    transition: background .2s ease, border-color .2s ease, transform .12s ease;
   }
   .btn:active { transform: scale(0.97); }
-  .btn-amber { background: var(--amber); color: #3a2a00; }
-  .btn-ghost { background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.25); }
+  .btn-primary { background: var(--ink); color: #fff; }
+  .btn-primary:hover { background: #2A3250; }
+  .btn-secondary { background: var(--surface); color: var(--ink); border-color: var(--line-2); }
+  .btn-secondary:hover { border-color: var(--ink); }
 
-  /* SECTION */
-  section { padding: 54px 0; }
-  .eyebrow { color: var(--blue); font-weight: 700; font-size: 13px; letter-spacing: 1.4px; text-transform: uppercase; }
-  .section-title { font-size: clamp(24px, 4vw, 34px); font-weight: 800; margin-top: 8px; color: var(--navy); }
-  .section-intro { color: var(--muted); margin-top: 10px; max-width: 620px; }
+  /* reveal on scroll */
+  .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+  .js .reveal.in { opacity: 1; transform: none; }
 
-  /* FEATURES */
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 34px; }
-  .card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-    padding: 26px 22px; box-shadow: var(--shadow);
+  /* ========== HERO ========== */
+  .hero { padding: 76px 0 70px; }
+  .hero-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 64px; align-items: center; }
+  @media (max-width: 920px) { .hero-grid { grid-template-columns: 1fr; gap: 44px; } }
+  .hero h1 {
+    font-family: var(--serif); font-weight: 500; font-size: clamp(40px, 5.6vw, 68px);
+    line-height: 1.04; letter-spacing: -0.025em; margin-top: 22px; max-width: 700px;
   }
-  .card h3 { font-size: 18px; font-weight: 700; color: var(--navy); }
-  .card p { color: var(--muted); font-size: 14.5px; margin-top: 6px; }
-  .card .tag-new { font-size: 11px; font-weight: 800; color: var(--green); background: var(--green-bg);
-    padding: 2px 9px; border-radius: 999px; margin-left: 7px; vertical-align: 2px; letter-spacing: .5px; }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero-stat { margin-top: 22px; font-weight: 700; font-size: 15px; color: var(--ink-2); display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .hero-stat span { display: inline-flex; align-items: center; gap: 14px; }
+  .hero-stat span + span::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--line-2); }
+  .lede { color: var(--muted); margin-top: 16px; max-width: 560px; font-size: 17px; }
+  .hero-new {
+    display: inline-flex; align-items: center; gap: 10px; margin-top: 26px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+    padding: 6px 16px 6px 6px; font-size: 14px; font-weight: 600; color: var(--ink-2);
+    transition: border-color .2s ease;
+  }
+  .hero-new:hover { border-color: var(--green); }
+  .hero-new b { background: var(--sage); color: var(--green); font-size: 11px; letter-spacing: .08em; padding: 4px 10px; border-radius: 999px; }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
 
-  /* FOCUS TREE */
+  /* RATING CARD (side) */
+  .rating-card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 22px;
+    padding: 30px 30px 24px; box-shadow: var(--shadow-lg); position: relative;
+  }
+  .rc-top { display: flex; align-items: center; justify-content: space-between; font-size: 13px; font-weight: 600; color: var(--muted); }
+  .rc-top .gp { display: inline-flex; align-items: center; gap: 8px; color: var(--ink-2); }
+  .rc-score { display: flex; align-items: baseline; gap: 8px; margin-top: 18px; }
+  .rc-score .num { font-family: var(--serif); font-weight: 500; font-size: 78px; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+  .rc-score .of { font-family: var(--serif); font-size: 22px; color: var(--muted); }
+  .stars-anim { display: flex; gap: 6px; margin-top: 14px; }
+  .st { position: relative; width: 30px; height: 30px; }
+  .st svg { position: absolute; inset: 0; width: 30px; height: 30px; }
+  .st .base { fill: var(--star-empty); }
+  .st .fill { position: absolute; inset: 0; width: 0%; overflow: hidden; transition: width .5s cubic-bezier(.4,.1,.2,1); }
+  .st .fill svg { fill: var(--gold); }
+  .rc-label { font-size: 13.5px; color: var(--muted); margin-top: 10px; }
+  .rc-grid { display: grid; grid-template-columns: 1fr 1fr; margin-top: 24px; border-top: 1px solid var(--line); }
+  .rc-grid div { padding-top: 20px; }
+  .rc-grid div + div { padding-left: 22px; border-left: 1px solid var(--line); }
+  .rc-grid b { display: block; font-family: var(--serif); font-weight: 500; font-size: 36px; line-height: 1.05; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .rc-grid span { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .rc-foot { margin-top: 22px; padding-top: 16px; border-top: 1px dashed var(--line-2); font-size: 12.5px; color: var(--muted); font-weight: 600; letter-spacing: .02em; }
+
+  /* ========== FEATURES ========== */
+  .fgrid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 44px;
+    background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+  }
+  @media (max-width: 960px) { .fgrid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .fgrid { grid-template-columns: 1fr; } }
+  .f { background: var(--surface); padding: 30px 26px 32px; transition: background .25s ease; }
+  .f:hover { background: #FCFBF8; }
+  .f .n { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--accent); }
+  .f h3 { font-size: 17px; font-weight: 700; margin-top: 18px; letter-spacing: -0.005em; }
+  .f p { color: var(--muted); font-size: 14.5px; margin-top: 8px; line-height: 1.6; }
+  .tag-new { font-size: 10.5px; font-weight: 800; color: var(--green); background: var(--sage); padding: 3px 8px; border-radius: 999px; margin-left: 6px; vertical-align: 2px; letter-spacing: .08em; }
+
+  /* ========== FOCUS TREE ========== */
   .tree-card {
-    background: linear-gradient(160deg, #15173D 0%, #10305A 100%);
-    color: #fff; border-radius: 26px; padding: 44px 40px;
-    box-shadow: var(--shadow); position: relative; overflow: hidden;
+    background: var(--sage); border: 1px solid var(--sage-line); border-radius: 26px;
+    padding: 56px 52px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px;
   }
-  .tree-card::after {
-    content: ""; position: absolute; left: -100px; bottom: -120px;
-    width: 320px; height: 320px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(8, 143, 22, 0.3), transparent 70%);
+  @media (max-width: 900px) { .tree-card { grid-template-columns: 1fr; gap: 36px; padding: 40px 26px; } }
+  .tree-card .kicker { color: var(--green); }
+  .tree-card .lede { color: var(--ink-2); max-width: 520px; }
+  .tree-head { font-weight: 700; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--green); }
+  .tree-list { margin-top: 14px; }
+  .tree-list div { display: flex; align-items: flex-start; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--sage-line); color: var(--ink-2); font-size: 15px; }
+  .tree-list div:last-child { border-bottom: none; }
+  .tree-list .tick-ico { stroke: var(--green); }
+  .tree-callout { margin-top: 30px; background: var(--surface); border: 1px solid var(--sage-line); border-radius: 16px; padding: 22px 24px; }
+  .tree-callout b { font-family: var(--serif); font-weight: 600; font-size: 19px; color: var(--ink); }
+  .tree-callout p { color: var(--ink-2); font-size: 15px; margin-top: 6px; }
+  .tree-callout a { color: var(--green); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+  .tree-tagline { margin-top: 28px; font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 28px; color: var(--green); }
+
+  /* ========== TOPICS ========== */
+  .topics {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 44px;
+    background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
   }
-  .tree-card .eyebrow { color: var(--green-bright); }
-  .tree-card p.lede { color: rgba(255,255,255,0.85); margin-top: 14px; max-width: 640px; font-size: 16px; position: relative; z-index: 2; }
-  .tree-head { font-family: 'Plus Jakarta Sans'; font-weight: 800; font-size: 15px;
-    letter-spacing: .6px; text-transform: uppercase; color: var(--green-bright); margin-top: 30px; position: relative; z-index: 2; }
-  .tree-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 30px; margin-top: 16px; position: relative; z-index: 2; }
-  @media (max-width: 760px) { .tree-list { grid-template-columns: 1fr; } }
-  .tree-list div { display: flex; align-items: flex-start; gap: 10px; color: rgba(255,255,255,0.9); font-size: 15px; }
-  .tree-list .tick { color: var(--green-bright); font-weight: 800; flex-shrink: 0; }
-  .tree-callout {
-    margin-top: 28px; background: rgba(57, 189, 28, 0.14); border: 1px solid rgba(34,197,94,0.42);
-    border-radius: 16px; padding: 20px 22px; position: relative; z-index: 2;
-  }
-  .tree-callout b { color: #BBF7D0; font-family: 'Plus Jakarta Sans'; font-size: 16px; }
-  .tree-callout p { color: rgba(255,255,255,0.85); font-size: 15px; margin-top: 5px; }
-  .tree-callout a { color: #BBF7D0; font-weight: 700; text-decoration: underline; }
-  .tree-tagline { margin-top: 26px; font-family: 'Plus Jakarta Sans'; font-weight: 800;
-    font-size: 20px; color: var(--green-bright); position: relative; z-index: 2; }
+  @media (max-width: 860px) { .topics { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .topics { grid-template-columns: 1fr; } }
+  .topic { background: var(--surface); padding: 22px 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .topic .t { display: flex; align-items: baseline; gap: 14px; }
+  .topic .t i { font-family: var(--serif); font-size: 14px; color: var(--muted); }
+  .topic .t span { font-family: var(--serif); font-weight: 500; font-size: 21px; letter-spacing: -0.01em; }
+  .topic .on { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--green); font-weight: 700; white-space: nowrap; }
+  .topic .on::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
 
-  /* TOPICS chips */
-  .topics { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-  .topic {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
-    padding: 14px 18px; display: flex; align-items: center; gap: 12px; box-shadow: var(--shadow);
-    font-weight: 700; color: var(--navy); font-size: 15px;
-  }
-  .topic .on { font-size: 11px; color: var(--green); background: var(--green-bg); padding: 2px 8px; border-radius: 999px; font-weight: 700; }
-
-  /* BOOK */
-  .book-card {
-    background: var(--navy); color: #fff; border-radius: 24px; padding: 40px;
-    display: grid; grid-template-columns: 1fr; gap: 8px; box-shadow: var(--shadow); position: relative; overflow: hidden;
-  }
-  .book-card .eyebrow { color: var(--amber); }
-  .book-card p { color: rgba(255,255,255,0.82); margin-top: 12px; max-width: 640px; }
-  .book-points { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
-  .book-points div { display: flex; align-items: flex-start; gap: 10px; color: rgba(255,255,255,0.9); font-size: 15px; }
-  .book-points .tick { color: var(--amber); font-weight: 800; flex-shrink: 0; }
-
-  /* PRIVACY */
-  .privacy { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 34px; box-shadow: var(--shadow); }
-  .privacy p, .privacy li { color: var(--muted); font-size: 15px; }
-  .privacy .updated { font-size: 13px; color: var(--muted); margin-top: 4px; }
-
-  /* CONTACT */
-  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 18px; margin-top: 30px; }
-  .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); }
-  .contact-card .label { font-size: 13px; color: var(--muted); font-weight: 600; }
-  .contact-card a, .contact-card .val { font-size: 17px; font-weight: 700; color: var(--navy); word-break: break-word; }
-  .contact-card a:hover { color: var(--blue); }
-
-  /* FOOTER */
-  footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 34px 0; margin-top: 30px; }
-  .foot-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
-  .foot-brand { display: flex; align-items: center; gap: 10px; color: #fff; font-weight: 800; font-family: 'Plus Jakarta Sans'; }
-  footer a { color: rgba(255,255,255,0.7); font-size: 14px; }
-  footer a:hover { color: #fff; }
-
-  /* PROGRESS / SETS DEMO */
-  .progress-wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 26px; margin-top: 34px; align-items: start; }
-  @media (max-width: 780px) { .progress-wrap { grid-template-columns: 1fr; } }
+  /* ========== PROGRESS ========== */
+  .progress-wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; margin-top: 44px; align-items: start; }
+  @media (max-width: 820px) { .progress-wrap { grid-template-columns: 1fr; } }
   .sets-demo {
     display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px;
-    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-    padding: 20px; box-shadow: var(--shadow);
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 22px; box-shadow: var(--shadow-sm);
   }
   .set-cell {
     aspect-ratio: 1; border-radius: 12px; background: var(--c); color: var(--t);
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    box-shadow: 0 3px 8px rgba(15,23,61,0.12);
   }
-  .set-cell b { font-family: 'Plus Jakarta Sans'; font-size: 18px; font-weight: 800; line-height: 1; }
-  .set-cell small { font-size: 11px; font-weight: 700; margin-top: 3px; }
-  .legend-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); }
-  .legend-card h3 { color: var(--navy); font-size: 20px; font-weight: 800; }
-  .legend-sub { color: var(--muted); font-size: 14px; margin-top: 2px; margin-bottom: 16px; }
-  .legend { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .legend div { display: flex; align-items: center; gap: 10px; font-size: 14.5px; font-weight: 600; color: var(--navy); }
+  .set-cell b { font-family: var(--serif); font-size: 21px; font-weight: 600; line-height: 1; }
+  .set-cell small { font-size: 11px; font-weight: 700; margin-top: 4px; opacity: .9; }
+  .legend-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow-sm); }
+  .legend-card h3 { font-family: var(--serif); font-size: 24px; font-weight: 500; }
+  .legend-sub { color: var(--muted); font-size: 14px; margin-top: 2px; margin-bottom: 20px; }
+  .legend { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .legend div { display: flex; align-items: center; gap: 10px; font-size: 14.5px; font-weight: 600; color: var(--ink-2); }
   .legend .sw { width: 20px; height: 20px; border-radius: 6px; flex-shrink: 0; }
   @media (max-width: 420px) { .legend { grid-template-columns: 1fr; } }
+
+  /* ========== REVIEWS ========== */
+  .rv-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .rv-controls { display: flex; align-items: center; gap: 14px; }
+  .rv-count { font-family: var(--serif); font-size: 17px; color: var(--muted); font-variant-numeric: tabular-nums; min-width: 64px; text-align: center; }
+  .rv-count b { color: var(--ink); font-weight: 600; }
+  .rv-btn {
+    width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-2); background: var(--surface);
+    display: grid; place-items: center; cursor: pointer; color: var(--ink); transition: border-color .2s ease, transform .12s ease;
+  }
+  .rv-btn:hover { border-color: var(--ink); }
+  .rv-btn:active { transform: scale(0.94); }
+  .rv-btn svg { width: 18px; height: 18px; }
+  .rv-viewport {
+    margin-top: 40px; overflow: hidden; padding: 24px 0 30px; touch-action: pan-y;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
+  }
+  .rv-track { position: relative; display: flex; align-items: center; transition: transform .75s cubic-bezier(.65,.05,.25,1); will-change: transform; }
+  .rv-track.jump, .rv-track.jump * { transition: none !important; }
+  .rv-card {
+    flex: 0 0 auto; width: 370px; height: 360px; margin: 0 11px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 22px;
+    padding: 26px 28px 22px; display: flex; flex-direction: column; cursor: pointer;
+    transform: scale(0.88);
+    transition: transform .75s cubic-bezier(.65,.05,.25,1), box-shadow .75s ease, border-color .75s ease;
+  }
+  .rv-card > * { opacity: 0.42; transition: opacity .75s ease; }
+  .rv-card.is-active { transform: scale(1); box-shadow: var(--shadow-lg); border-color: var(--line-2); cursor: default; }
+  .rv-card.is-active > * { opacity: 1; }
+  @media (max-width: 560px) { .rv-card { width: 78vw; height: 340px; margin: 0 4px; padding: 22px 22px 20px; } }
+  .rv-top { display: flex; align-items: center; gap: 12px; }
+  .rv-av { width: 42px; height: 42px; border-radius: 50%; background: var(--av); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 16px; flex-shrink: 0; }
+  .rv-name { font-weight: 700; font-size: 15px; line-height: 1.25; }
+  .rv-date { font-size: 12.5px; color: var(--muted); }
+  .rv-stars { display: flex; gap: 3px; margin-top: 18px; }
+  .rv-stars svg { width: 17px; height: 17px; }
+  .rv-text {
+    font-family: var(--serif); font-size: 20px; line-height: 1.42; letter-spacing: -0.005em; color: var(--ink); margin-top: 12px;
+    flex-shrink: 0; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  @media (max-width: 560px) { .rv-text { font-size: 18px; } }
+  .rv-note { font-size: 12px; color: var(--muted); font-style: italic; margin-top: 8px; }
+  .rv-foot { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--muted); font-weight: 600; }
+  .rv-foot .mark { width: 20px; height: 20px; border-radius: 5px; font-size: 7.5px; }
+  .rv-src { margin-top: 6px; font-size: 13px; color: var(--muted); text-align: center; }
+
+  /* ========== BOOK ========== */
+  .book-card {
+    background: var(--ink); color: #fff; border-radius: 26px; padding: 56px 52px;
+    display: grid; grid-template-columns: 1.35fr 0.65fr; gap: 48px; align-items: center;
+  }
+  @media (max-width: 880px) { .book-card { grid-template-columns: 1fr; padding: 40px 26px; gap: 30px; } }
+  .book-card .kicker { color: #CDB27A; }
+  .book-card .section-title { color: #fff; }
+  .book-card p { color: rgba(255,255,255,0.74); margin-top: 16px; max-width: 600px; font-size: 16px; }
+  .book-points { margin-top: 26px; display: flex; flex-direction: column; }
+  .book-points div { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.88); font-size: 15px; }
+  .book-points .tick-ico { stroke: #CDB27A; }
+  .book-num { border-left: 1px solid rgba(255,255,255,0.14); padding-left: 40px; }
+  @media (max-width: 880px) { .book-num { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,0.14); padding-top: 26px; } }
+  .book-num b { display: block; font-family: var(--serif); font-weight: 500; font-size: clamp(56px, 6.2vw, 76px); line-height: 1; letter-spacing: -0.03em; }
+  .book-num span { display: block; margin-top: 10px; color: rgba(255,255,255,0.6); font-size: 14px; font-weight: 600; }
+
+  /* ========== PRIVACY ========== */
+  .privacy { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 36px; box-shadow: var(--shadow-sm); margin-top: 32px; max-width: 860px; }
+  .privacy p { color: var(--ink-2); font-size: 15.5px; }
+  .privacy .updated { font-size: 13px; color: var(--muted); font-weight: 600; }
+
+  /* ========== CONTACT ========== */
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 36px; }
+  .contact-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow-sm); }
+  .contact-card .label { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  .contact-card a, .contact-card .val { display: inline-block; margin-top: 8px; font-family: var(--serif); font-size: 23px; font-weight: 500; color: var(--ink); word-break: break-word; }
+  .contact-card a:hover { color: var(--accent); }
+
+  /* ========== FOOTER ========== */
+  footer { background: #131828; color: rgba(255,255,255,0.62); padding: 36px 0; margin-top: 40px; font-size: 14px; }
+  .foot-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .foot-brand { display: flex; align-items: center; gap: 10px; color: #fff; font-family: var(--serif); font-weight: 600; font-size: 19px; }
+  .foot-brand .mark { background: #fff; color: var(--ink); }
+  footer a:hover { color: #fff; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .vocab-row { animation: none !important; }
+    .rv-track, .rv-card, .st .fill { transition: none !important; }
+    .js .reveal { opacity: 1; transform: none; }
+  }
 </style>
 </head>
 <body>
 
+<!-- Background vocabulary (filled by script) -->
+<div class="vocab-bg" id="vocabBg" aria-hidden="true"></div>
+
 <nav>
   <div class="wrap nav-inner">
-    <div class="brand"><span class="logo">WO</span> WhiteOceanBook</div>
+    <a href="#" class="brand"><span class="mark">WO</span> WhiteOceanBook</a>
     <div class="nav-links">
       <a href="#features">Features</a>
       <a href="#focus-tree">Focus Tree</a>
       <a href="#topics">Topics</a>
       <a href="#progress">Progress</a>
+      <a href="#reviews">Reviews</a>
       <a href="#book">Book</a>
       <a href="#privacy">Privacy</a>
       <a href="#contact">Contact</a>
     </div>
+    <a href="https://play.google.com/store/apps/details?id=com.whiteoceanbook.app" class="nav-cta" target="_blank" rel="noopener">
+      <svg class="play-ico" viewBox="0 0 14 16" aria-hidden="true"><path d="M1 1.5v13a1 1 0 0 0 1.5.87l11-6.5a1 1 0 0 0 0-1.74l-11-6.5A1 1 0 0 0 1 1.5z" fill="currentColor"/></svg>
+      Get the app
+    </a>
   </div>
 </nav>
 
-<header class="hero wrap">
-  <div class="hero-card">
-    <div class="hero-brand">
-      <div class="hero-logo">WO</div>
-      <span>WhiteOceanBook</span>
+<main>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="kicker">English Vocabulary · SSC &amp; Others</div>
+      <h1>Master English <em>vocabulary</em> for SSC, Banking &amp; competitive exams.</h1>
+      <div class="hero-stat"><span>20,000+ Questions</span><span>Inspired by PYQs</span></div>
+      <p class="lede">An offline practice app with detailed solutions. Track your progress by colour, bookmark tricky words, and learn the ones that actually appear in exams.</p>
+      <a href="#focus-tree" class="hero-new"><b>NEW</b> Focus Tree: turn study time into a growing tree</a>
+      <div class="cta-row">
+        <a href="https://play.google.com/store/apps/details?id=com.whiteoceanbook.app" class="btn btn-primary" target="_blank" rel="noopener">
+          <svg class="play-ico" viewBox="0 0 14 16" aria-hidden="true"><path d="M1 1.5v13a1 1 0 0 0 1.5.87l11-6.5a1 1 0 0 0 0-1.74l-11-6.5A1 1 0 0 0 1 1.5z" fill="currentColor"/></svg>
+          Get it on Play Store
+        </a>
+        <a href="#features" class="btn btn-secondary">See what's inside</a>
+      </div>
     </div>
-    <a href="https://play.google.com/store/apps/details?id=com.whiteoceanbook.app" class="btn-nav hero-badge" target="_blank" rel="noopener">
-      <svg class="play-ico" viewBox="0 0 14 16" fill="none" aria-hidden="true">
-        <path d="M1 1.5v13a1 1 0 0 0 1.5.87l11-6.5a1 1 0 0 0 0-1.74l-11-6.5A1 1 0 0 0 1 1.5z" fill="currentColor"/>
-      </svg>
-      <span class="full">Get it on Play Store</span>
-    </a>
-    <h1>Master English vocabulary for SSC, Banking &amp; competitive exams.</h1>
-    <div class="sub">English Vocabulary · SSC &amp; Others</div>
-    <div class="stat">20,000+ Questions · inspired by PYQs</div>
-    <p class="lede">An offline practice app with detailed solutions. Track your progress by colour, bookmark tricky words, and learn the ones that actually appear in exams.</p>
-    <a href="#focus-tree" class="hero-new">🌱 New — Focus Tree: turn study time into a growing tree</a>
-    <div class="cta-row">
-      <a href="https://play.google.com/store/apps/details?id=com.whiteoceanbook.app" class="btn btn-amber" target="_blank" rel="noopener">Get it on Play Store</a>
-      <a href="#features" class="btn btn-ghost">See what's inside</a>
-    </div>
+
+    <aside class="rating-card reveal" id="ratingCard" aria-label="App rating and downloads">
+      <div class="rc-top">
+        <span class="gp">
+          <svg class="play-ico" viewBox="0 0 14 16" aria-hidden="true"><path d="M1 1.5v13a1 1 0 0 0 1.5.87l11-6.5a1 1 0 0 0 0-1.74l-11-6.5A1 1 0 0 0 1 1.5z" fill="currentColor"/></svg>
+          Google Play
+        </span>
+        <span>User rating</span>
+      </div>
+      <div class="rc-score">
+        <span class="num" data-to="4.7" data-dec="1">0.0</span><span class="of">/ 5</span>
+      </div>
+      <div class="stars-anim" id="heroStars" role="img" aria-label="4.7 out of 5 stars"></div>
+      <div class="rc-label">Average rating from learners on Google Play</div>
+      <div class="rc-grid">
+        <div><b data-to="5" data-suffix="K+">0</b><span>Downloads</span></div>
+        <div><b data-to="20000" data-suffix="+" data-comma="1">0</b><span>Questions</span></div>
+      </div>
+      <div class="rc-foot">No ads · No account · Works offline</div>
+    </aside>
   </div>
 </header>
 
-<section id="features" class="wrap">
-  <div class="eyebrow">Why WhiteOceanBook</div>
-  <h2 class="section-title">Built for exam aspirants</h2>
-  <p class="section-intro">Everything you need to build a strong vocabulary — clean, fast, and distraction-free.</p>
-  <div class="grid">
-    <div class="card"><h3>20,000+ Questions</h3><p>A huge, carefully selected question bank including Previous Year Questions (PYQs) from major exams.</p></div>
-    <div class="card"><h3>Works Offline</h3><p>No internet needed. Practice anytime, anywhere — on the bus, in class, or at home.</p></div>
-    <div class="card"><h3>Detailed Solutions</h3><p>Every question comes with a clear explanation for each option, so you understand, not just memorise.</p></div>
-    <div class="card"><h3>Focus Tree <span class="tag-new">NEW</span></h3><p>Start a focus session and watch your tree grow as your focused study time increases.</p></div>
-    <div class="card"><h3>Track by Colour</h3><p>Each set is colour-coded by your latest accuracy, so you instantly see where you're strong and weak.</p></div>
-    <div class="card"><h3>Bookmarks</h3><p>Save tricky questions and revise them later in one place.</p></div>
-    <div class="card"><h3>Dark Mode</h3><p>Comfortable reading day or night, with a clean high-contrast design.</p></div>
-    <div class="card"><h3>No Ads, No Account</h3><p>Completely ad-free and no sign-up. Your progress stays on your own device.</p></div>
+<!-- ===== FEATURES ===== -->
+<section id="features">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Why WhiteOceanBook</div>
+      <h2 class="section-title">Built for exam <em>aspirants</em></h2>
+      <p class="section-intro">Everything you need to build a strong vocabulary — clean, fast, and distraction-free.</p>
+    </div>
+    <div class="fgrid reveal">
+      <div class="f"><div class="n">01</div><h3>20,000+ Questions</h3><p>A huge, carefully selected question bank including Previous Year Questions (PYQs) from major exams.</p></div>
+      <div class="f"><div class="n">02</div><h3>Works Offline</h3><p>No internet needed. Practice anytime, anywhere — on the bus, in class, or at home.</p></div>
+      <div class="f"><div class="n">03</div><h3>Detailed Solutions</h3><p>Every question comes with a clear explanation for each option, so you understand, not just memorise.</p></div>
+      <div class="f"><div class="n">04</div><h3>Focus Tree <span class="tag-new">NEW</span></h3><p>Start a focus session and watch your tree grow as your focused study time increases.</p></div>
+      <div class="f"><div class="n">05</div><h3>Track by Colour</h3><p>Each set is colour-coded by your latest accuracy, so you instantly see where you're strong and weak.</p></div>
+      <div class="f"><div class="n">06</div><h3>Bookmarks</h3><p>Save tricky questions and revise them later in one place.</p></div>
+      <div class="f"><div class="n">07</div><h3>Dark Mode</h3><p>Comfortable reading day or night, with a clean high-contrast design.</p></div>
+      <div class="f"><div class="n">08</div><h3>No Ads, No Account</h3><p>Completely ad-free and no sign-up. Your progress stays on your own device.</p></div>
+    </div>
   </div>
 </section>
 
-<section id="focus-tree" class="wrap">
-  <div class="tree-card">
-    <div class="eyebrow">🌱 New in WhiteOceanBook</div>
-    <h2 class="section-title" style="color:#fff;position:relative;z-index:2">Introducing Focus Tree</h2>
-    <p class="lede">Turn your study and work time into a growing tree. 🌳 Start a focus session and watch your tree grow as your focused time increases. ⏱️</p>
-
-    <div class="tree-head">New Features</div>
-    <div class="tree-list">
-      <div><span class="tick">•</span> Focus timer to track your productive time</div>
-      <div><span class="tick">•</span> Tree grows with your focus</div>
-      <div><span class="tick">•</span> Progress is saved during your session</div>
-      <div><span class="tick">•</span> Resume your progress and continue where you left off</div>
-      <div><span class="tick">•</span> Your tree stops growing when you leave or quit the session</div>
-      <div><span class="tick">•</span> Complete longer focus sessions to grow a healthier tree</div>
-      <div><span class="tick">•</span> A distraction-free experience for better concentration</div>
-      <div><span class="tick">•</span> Celebrate completed sessions with encouraging messages 🎉</div>
-    </div>
-
-    <div class="tree-callout">
-      <b>🌳 Grow a real tree with your name </b>
-      <p>Complete a 5-hour focus session, then send us a screenshot along with your name at
-        <a href="mailto:support@whiteoceanbook.com">support@whiteoceanbook.com</a> — we will plant a real tree in your name.</p>
-    </div>
-
-    <div class="tree-tagline">Focus more. Grow more.</div>
-  </div>
-</section>
-
-<section id="topics" class="wrap">
-  <div class="eyebrow">What you'll practice</div>
-  <h2 class="section-title">Topics inside the app</h2>
-  <div class="topics">
-    <div class="topic">One-Word Substitution <span class="on">Active</span></div>
-    <div class="topic">Synonyms <span class="on">Active</span></div>
-    <div class="topic">Antonyms <span class="on">Active</span></div>
-    <div class="topic">Spelling <span class="on">Active</span></div>
-    <div class="topic">Idioms &amp; Phrases <span class="on">Active</span></div>
-    <div class="topic">Wave of English <span class="on">Active</span></div>
-    <div class="topic">Phrasal Verb <span class="on">Active</span></div>
-    <div class="topic">Homophones <span class="on">Active</span></div>
-    <div class="topic">Root Words <span class="on">Active</span></div>
-  </div>
-</section>
-
-<section id="progress" class="wrap">
-  <div class="eyebrow">See your growth</div>
-  <h2 class="section-title">Track your progress by colour</h2>
-  <p class="section-intro">Every set is colour-coded by your latest score. One glance shows what's mastered and what needs work.</p>
-
-  <div class="progress-wrap">
-    <div class="sets-demo">
-      <div class="set-cell" style="--c:#F97316;--t:#fff"><b>1</b><small>40%</small></div>
-      <div class="set-cell" style="--c:#EF4444;--t:#fff"><b>2</b><small>0%</small></div>
-      <div class="set-cell" style="--c:#FACC15;--t:#15171F"><b>3</b><small>50%</small></div>
-      <div class="set-cell" style="--c:#4ADE80;--t:#14532D"><b>4</b><small>90%</small></div>
-      <div class="set-cell" style="--c:#EF4444;--t:#fff"><b>5</b><small>0%</small></div>
-      <div class="set-cell" style="--c:#FACC15;--t:#15171F"><b>6</b><small>50%</small></div>
-      <div class="set-cell" style="--c:#006400;--t:#fff"><b>7</b><small>100%</small></div>
-      <div class="set-cell" style="--c:#EF4444;--t:#fff"><b>8</b><small>20%</small></div>
-      <div class="set-cell" style="--c:#FACC15;--t:#15171F"><b>9</b><small>50%</small></div>
-      <div class="set-cell" style="--c:#4ADE80;--t:#14532D"><b>10</b><small>80%</small></div>
-      <div class="set-cell" style="--c:#4ADE80;--t:#14532D"><b>11</b><small>80%</small></div>
-      <div class="set-cell" style="--c:#EF4444;--t:#fff"><b>12</b><small>20%</small></div>
-      <div class="set-cell" style="--c:#F97316;--t:#fff"><b>13</b><small>40%</small></div>
-      <div class="set-cell" style="--c:#4ADE80;--t:#14532D"><b>14</b><small>80%</small></div>
-      <div class="set-cell" style="--c:#EF4444;--t:#fff"><b>15</b><small>20%</small></div>
-      <div class="set-cell" style="--c:#FACC15;--t:#15171F"><b>16</b><small>50%</small></div>
-      <div class="set-cell" style="--c:#006400;--t:#fff"><b>17</b><small>100%</small></div>
-      <div class="set-cell" style="--c:#FACC15;--t:#15171F"><b>18</b><small>50%</small></div>
-      <div class="set-cell" style="--c:#F97316;--t:#fff"><b>19</b><small>30%</small></div>
-      <div class="set-cell" style="--c:#006400;--t:#fff"><b>20</b><small>100%</small></div>
-    </div>
-
-    <div class="legend-card">
-      <h3>Colour guide</h3>
-      <p class="legend-sub">Track your progress by colour</p>
-      <div class="legend">
-        <div><span class="sw" style="background:#fff;border:1px solid var(--border)"></span> Not attempted</div>
-        <div><span class="sw" style="background:#EF4444"></span> 0–24%</div>
-        <div><span class="sw" style="background:#F97316"></span> 25–49%</div>
-        <div><span class="sw" style="background:#FACC15"></span> 50–74%</div>
-        <div><span class="sw" style="background:#4ADE80"></span> 75–94%</div>
-        <div><span class="sw" style="background:#006400"></span> 95–100%</div>
+<!-- ===== FOCUS TREE ===== -->
+<section id="focus-tree">
+  <div class="wrap">
+    <div class="tree-card reveal">
+      <div>
+        <div class="kicker">🌱 New in WhiteOceanBook</div>
+        <h2 class="section-title">Introducing Focus Tree</h2>
+        <p class="lede">Turn your study and work time into a growing tree. 🌳 Start a focus session and watch your tree grow as your focused time increases. ⏱️</p>
+        <div class="tree-callout">
+          <b>🌳 Grow a real tree with your name</b>
+          <p>Complete a 5-hour focus session, then send us a screenshot along with your name at
+            <a href="mailto:support@whiteoceanbook.com">support@whiteoceanbook.com</a> — we will plant a real tree in your name.</p>
+        </div>
+        <div class="tree-tagline">Focus more. Grow more.</div>
+      </div>
+      <div>
+        <div class="tree-head">New Features</div>
+        <div class="tree-list">
+          <div><svg class="tick-ico" viewBox="0 0 16 16" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg> Focus timer to track your productive time</div>
+          <div><svg class="tick-ico" viewBox="0 0 16 16" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg> Tree grows with your focus</div>
+          <div><svg class="tick-ico" viewBox="0 0 16 16" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg> Progress is saved during your session</div>
+          <div><svg class="tick-ico" viewBox="0 0 16 16" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg> Resume your progress and continue where you left off</div>
+          <div><svg class="tick-ico" viewBox="0 0 16 16" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg> Your tree stops growing when you leave or quit the session</div>
+          <div><svg class="tick-ico" viewBox="0 0 16 16" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg> Complete longer focus sessions to grow a healthier tree</div>
+          <div><svg class="tick-ico" viewBox="0 0 16 16" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg> A distraction-free experience for better concentration</div>
+          <div><svg class="tick-ico" viewBox="0 0 16 16" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg> Celebrate completed sessions with encouraging messages 🎉</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="book" class="wrap">
-  <div class="book-card">
-    <div class="eyebrow">The Book</div>
-    <h2 class="section-title" style="color:#fff">A companion book is on the way</h2>
-    <p>WhiteOceanBook pairs the app with a printed book of 22,000+ handpicked questions — inspired by PYQs from SSC CGL, CPO, CHSL, Railway, Banking and more.</p>
-    <div class="book-points">
-      <div><span class="tick">✓</span> 22,000+ questions with detailed solutions</div>
-      <div><span class="tick">✓</span> Inspired by Previous Year Questions from major government exams</div>
-      <div><span class="tick">✓</span> A unique “Wave of English” section for everyday English &amp; exam vocabulary</div>
-      <div><span class="tick">✓</span> Each book will carry a code to unlock Pro features in the app</div>
+<!-- ===== TOPICS ===== -->
+<section id="topics">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">What you'll practice</div>
+      <h2 class="section-title">Topics inside the app</h2>
+    </div>
+    <div class="topics reveal">
+      <div class="topic"><div class="t"><i>01</i><span>One-Word Substitution</span></div><span class="on">Active</span></div>
+      <div class="topic"><div class="t"><i>02</i><span>Synonyms</span></div><span class="on">Active</span></div>
+      <div class="topic"><div class="t"><i>03</i><span>Antonyms</span></div><span class="on">Active</span></div>
+      <div class="topic"><div class="t"><i>04</i><span>Spelling</span></div><span class="on">Active</span></div>
+      <div class="topic"><div class="t"><i>05</i><span>Idioms &amp; Phrases</span></div><span class="on">Active</span></div>
+      <div class="topic"><div class="t"><i>06</i><span>Wave of English</span></div><span class="on">Active</span></div>
+      <div class="topic"><div class="t"><i>07</i><span>Phrasal Verb</span></div><span class="on">Active</span></div>
+      <div class="topic"><div class="t"><i>08</i><span>Homophones</span></div><span class="on">Active</span></div>
+      <div class="topic"><div class="t"><i>09</i><span>Root Words</span></div><span class="on">Active</span></div>
     </div>
   </div>
 </section>
 
-<section id="privacy" class="wrap">
-  <div class="eyebrow">Your data</div>
-  <h2 class="section-title">Privacy Policy</h2>
-  <div class="privacy" style="margin-top:22px">
-    <p class="updated">Last updated: 28 sept 2026</p>
-    <p style="margin-top:12px">WhiteOceanBook does <strong>not collect any personal data</strong>. No account is needed, and your quiz progress, bookmarks, focus sessions and settings are saved only on your own device — they never leave your phone. All app data is permanently deleted when you uninstall the app or use Clear Data from App info. The current version of the app shows <strong>no advertisements</strong> and uses no third-party tracking.</p>
-    <p style="margin-top:12px">Read the complete policy here:</p>
-    <p style="margin-top:10px"><a href="/privacy-policy.html" style="display:inline-block;background:var(--navy);color:#fff;font-weight:700;font-family:'Plus Jakarta Sans';padding:12px 22px;border-radius:999px;font-size:15px">Read Full Privacy Policy</a></p>
+<!-- ===== PROGRESS ===== -->
+<section id="progress">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">See your growth</div>
+      <h2 class="section-title">Track your progress by <em>colour</em></h2>
+      <p class="section-intro">Every set is colour-coded by your latest score. One glance shows what's mastered and what needs work.</p>
+    </div>
+    <div class="progress-wrap reveal">
+      <div class="sets-demo">
+        <div class="set-cell" style="--c:#E38B55;--t:#fff"><b>1</b><small>40%</small></div>
+        <div class="set-cell" style="--c:#D9645A;--t:#fff"><b>2</b><small>0%</small></div>
+        <div class="set-cell" style="--c:#E6C35C;--t:#3A2F0E"><b>3</b><small>50%</small></div>
+        <div class="set-cell" style="--c:#86C38E;--t:#173A1E"><b>4</b><small>90%</small></div>
+        <div class="set-cell" style="--c:#D9645A;--t:#fff"><b>5</b><small>0%</small></div>
+        <div class="set-cell" style="--c:#E6C35C;--t:#3A2F0E"><b>6</b><small>50%</small></div>
+        <div class="set-cell" style="--c:#2F6A3B;--t:#fff"><b>7</b><small>100%</small></div>
+        <div class="set-cell" style="--c:#D9645A;--t:#fff"><b>8</b><small>20%</small></div>
+        <div class="set-cell" style="--c:#E6C35C;--t:#3A2F0E"><b>9</b><small>50%</small></div>
+        <div class="set-cell" style="--c:#86C38E;--t:#173A1E"><b>10</b><small>80%</small></div>
+        <div class="set-cell" style="--c:#86C38E;--t:#173A1E"><b>11</b><small>80%</small></div>
+        <div class="set-cell" style="--c:#D9645A;--t:#fff"><b>12</b><small>20%</small></div>
+        <div class="set-cell" style="--c:#E38B55;--t:#fff"><b>13</b><small>40%</small></div>
+        <div class="set-cell" style="--c:#86C38E;--t:#173A1E"><b>14</b><small>80%</small></div>
+        <div class="set-cell" style="--c:#D9645A;--t:#fff"><b>15</b><small>20%</small></div>
+        <div class="set-cell" style="--c:#E6C35C;--t:#3A2F0E"><b>16</b><small>50%</small></div>
+        <div class="set-cell" style="--c:#2F6A3B;--t:#fff"><b>17</b><small>100%</small></div>
+        <div class="set-cell" style="--c:#E6C35C;--t:#3A2F0E"><b>18</b><small>50%</small></div>
+        <div class="set-cell" style="--c:#E38B55;--t:#fff"><b>19</b><small>30%</small></div>
+        <div class="set-cell" style="--c:#2F6A3B;--t:#fff"><b>20</b><small>100%</small></div>
+      </div>
+      <div class="legend-card">
+        <h3>Colour guide</h3>
+        <p class="legend-sub">Track your progress by colour</p>
+        <div class="legend">
+          <div><span class="sw" style="background:#fff;border:1px solid var(--line-2)"></span> Not attempted</div>
+          <div><span class="sw" style="background:#D9645A"></span> 0–24%</div>
+          <div><span class="sw" style="background:#E38B55"></span> 25–49%</div>
+          <div><span class="sw" style="background:#E6C35C"></span> 50–74%</div>
+          <div><span class="sw" style="background:#86C38E"></span> 75–94%</div>
+          <div><span class="sw" style="background:#2F6A3B"></span> 95–100%</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="contact" class="wrap">
-  <div class="eyebrow">Get in touch</div>
-  <h2 class="section-title">Contact us</h2>
-  <p class="section-intro">Questions, feedback, or found a bug? We'd love to hear from you.</p>
-  <div class="contact-grid">
-    <div class="contact-card">
-      <div class="label">Email</div>
-      <a href="mailto:support@whiteoceanbook.com">support@whiteoceanbook.com</a>
+<!-- ===== REVIEWS ===== -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="rv-head reveal">
+      <div>
+        <div class="kicker">From the Play Store</div>
+        <h2 class="section-title">What learners <em>say</em></h2>
+        <p class="section-intro">Real reviews from students preparing for SSC, Banking and other government exams.</p>
+      </div>
+      <div class="rv-controls">
+        <button class="rv-btn" id="rvPrev" aria-label="Previous review">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4.5L7 10l5.5 5.5"/></svg>
+        </button>
+        <div class="rv-count" id="rvCount"><b>01</b> / 20</div>
+        <button class="rv-btn" id="rvNext" aria-label="Next review">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 4.5L13 10l-5.5 5.5"/></svg>
+        </button>
+      </div>
     </div>
-    <div class="contact-card">
-      <div class="label">Website</div>
-      <span class="val">whiteoceanbook.com</span>
+  </div>
+  <div class="rv-viewport" id="rvViewport">
+    <div class="rv-track" id="rvTrack"></div>
+  </div>
+  <p class="rv-src">Reviews shown as posted on Google Play.</p>
+</section>
+
+<!-- ===== BOOK ===== -->
+<section id="book">
+  <div class="wrap">
+    <div class="book-card reveal">
+      <div>
+        <div class="kicker">The Book</div>
+        <h2 class="section-title">A companion book is on the way</h2>
+        <p>WhiteOceanBook pairs the app with a printed book of 22,000+ handpicked questions — inspired by PYQs from SSC CGL, CPO, CHSL, Railway, Banking and more.</p>
+        <div class="book-points">
+          <div><svg class="tick-ico" viewBox="0 0 16 16" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg> 22,000+ questions with detailed solutions</div>
+          <div><svg class="tick-ico" viewBox="0 0 16 16" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg> Inspired by Previous Year Questions from major government exams</div>
+          <div><svg class="tick-ico" viewBox="0 0 16 16" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg> A unique “Wave of English” section for everyday English &amp; exam vocabulary</div>
+          <div><svg class="tick-ico" viewBox="0 0 16 16" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg> Each book will carry a code to unlock Pro features in the app</div>
+        </div>
+      </div>
+      <div class="book-num">
+        <b>22,000+</b>
+        <span>handpicked questions, with detailed solutions</span>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- ===== PRIVACY ===== -->
+<section id="privacy">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Your data</div>
+      <h2 class="section-title">Privacy Policy</h2>
+    </div>
+    <div class="privacy reveal">
+      <p class="updated">Last updated: 28 sept 2026</p>
+      <p style="margin-top:12px">WhiteOceanBook does <strong>not collect any personal data</strong>. No account is needed, and your quiz progress, bookmarks, focus sessions and settings are saved only on your own device — they never leave your phone. All app data is permanently deleted when you uninstall the app or use Clear Data from App info. The current version of the app shows <strong>no advertisements</strong> and uses no third-party tracking.</p>
+      <p style="margin-top:12px">Read the complete policy here:</p>
+      <p style="margin-top:16px"><a href="/privacy-policy.html" class="btn btn-primary">Read Full Privacy Policy</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Get in touch</div>
+      <h2 class="section-title">Contact us</h2>
+      <p class="section-intro">Questions, feedback, or found a bug? We'd love to hear from you.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-card">
+        <div class="label">Email</div>
+        <a href="mailto:support@whiteoceanbook.com">support@whiteoceanbook.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="label">Website</div>
+        <span class="val">whiteoceanbook.com</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
 
 <footer>
   <div class="wrap foot-inner">
-    <div class="foot-brand"><span class="logo">WO</span> WhiteOceanBook</div>
+    <div class="foot-brand"><span class="mark">WO</span> WhiteOceanBook</div>
     <div>© 2026 WhiteOceanBook · All rights reserved</div>
     <div><a href="/privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="#contact">Contact</a></div>
   </div>
 </footer>
 
+<script>
+(function () {
+  document.documentElement.classList.add('js');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var STAR = 'M12 2.6l2.93 5.94 6.56.95-4.75 4.63 1.12 6.53L12 17.57l-5.86 3.08 1.12-6.53L2.5 9.49l6.56-.95z';
+
+  /* ---------- 1. Background vocabulary ---------- */
+  var words = ['Ephemeral','Ubiquitous','Benevolent','Laconic','Meticulous','Pragmatic','Eloquent','Resilient','Tenacious','Verbose',
+    'Altruism','Ambiguous','Austere','Cogent','Diligent','Enigma','Fortitude','Gregarious','Impeccable','Juxtapose','Lucid',
+    'Magnanimous','Obstinate','Panacea','Quintessential','Reticent','Sagacious','Taciturn','Vindicate','Zealous','Abate',
+    'Capricious','Deference','Exacerbate','Frugal','Garrulous','Insipid','Jovial','Lethargic','Mitigate','Nonchalant',
+    'Ostentatious','Prudent','Rancour','Scrupulous','Trepidation','Venerate','Candid','Obsolete','Serendipity'];
+  var phrases = ['Once in a blue moon','Bite the bullet','A blessing in disguise','Abundant = Plentiful','Candid ≠ Evasive',
+    'Beat around the bush','Benevolent = Kind','Hit the nail on the head','Verbose ≠ Concise','Burn the midnight oil',
+    'Laconic = Brief','Cut corners','Ephemeral ≠ Lasting','Spill the beans'];
+  var bg = document.getElementById('vocabBg');
+  var ROWS = 9;
+  function shuffled(arr, seed) {
+    var a = arr.slice(), s = seed;
+    for (var i = a.length - 1; i > 0; i--) { s = (s * 9301 + 49297) % 233280; var j = Math.floor(s / 233280 * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+    return a;
+  }
+  for (var r = 0; r < ROWS; r++) {
+    var ws = shuffled(words, r + 7).slice(0, 9);
+    var ps = shuffled(phrases, r + 3).slice(0, 3);
+    var html = '';
+    ws.forEach(function (w, i) {
+      html += '<span class="w">' + w + '</span>';
+      if (i % 3 === 1) html += '<span class="p">' + ps[(i / 3) | 0] + '</span>';
+    });
+    var row = document.createElement('div');
+    row.className = 'vocab-row ' + (r % 2 ? 'right' : 'left');
+    row.style.setProperty('--dur', (110 + (r * 37) % 70) + 's');
+    row.innerHTML = html + html; // doubled for seamless loop
+    bg.appendChild(row);
+  }
+
+  /* ---------- 2. Reveal on scroll ---------- */
+  var revealIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); revealIO.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function (el) { revealIO.observe(el); });
+
+  /* ---------- 3. Rating card: count-up + star fill ---------- */
+  var starsWrap = document.getElementById('heroStars');
+  var FILLS = [100, 100, 100, 100, 70]; // 4.7 stars
+  FILLS.forEach(function () {
+    starsWrap.insertAdjacentHTML('beforeend',
+      '<span class="st"><svg class="base" viewBox="0 0 24 24"><path d="' + STAR + '"/></svg>' +
+      '<span class="fill"><svg viewBox="0 0 24 24"><path d="' + STAR + '"/></svg></span></span>');
+  });
+  var fills = starsWrap.querySelectorAll('.fill');
+  var counters = document.querySelectorAll('#ratingCard [data-to]');
+  var timers = [], rafs = [];
+
+  function format(el, v) {
+    var dec = +(el.dataset.dec || 0);
+    var txt = el.dataset.comma ? Math.round(v).toLocaleString('en-IN') : v.toFixed(dec);
+    return txt + (el.dataset.suffix || '');
+  }
+  function runCard() {
+    resetCard();
+    counters.forEach(function (el, k) {
+      var to = parseFloat(el.dataset.to), dur = 1600, start = null;
+      if (reduceMotion) { el.textContent = format(el, to); return; }
+      function step(t) {
+        if (start === null) start = t;
+        var p = Math.min((t - start) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+        el.textContent = format(el, to * e);
+        if (p < 1) rafs[k] = requestAnimationFrame(step);
+      }
+      rafs[k] = requestAnimationFrame(step);
+    });
+    fills.forEach(function (f, i) {
+      if (reduceMotion) { f.style.width = FILLS[i] + '%'; return; }
+      timers.push(setTimeout(function () { f.style.width = FILLS[i] + '%'; }, 300 + i * 280));
+    });
+  }
+  function resetCard() {
+    timers.forEach(clearTimeout); timers = [];
+    rafs.forEach(cancelAnimationFrame); rafs = [];
+    fills.forEach(function (f) { f.style.transition = 'none'; f.style.width = '0%'; void f.offsetWidth; f.style.transition = ''; });
+    counters.forEach(function (el) { el.textContent = format(el, 0); });
+  }
+  new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) runCard(); });
+  }, { threshold: 0.45 }).observe(document.getElementById('ratingCard'));
+
+  /* ---------- 4. Reviews carousel (infinite loop) ---------- */
+  var reviews = [
+    { n: 'Vanguri Srilatha', d: '1 Nov', r: 5, t: 'nice experience good app for English practices for government job very useful for this app' },
+    { n: 'Jitendra', d: '1 Nov', r: 5, t: 'useful for compitition' },
+    { n: 'Mohit Kumar', d: '1 Nov', r: 4, t: "this is an amazing app. I like it it was a great experience and i would just like to say this is the best for students. you should go for it and if I talk about experience I learn a lot and enhance my vocabulary through this app it's overall good you should go for it!" },
+    { n: 'Shiv Kumar', d: '31 Oct', r: 5, t: 'Best app for SSC aspirants' },
+    { n: 'Golu Kumar', d: '31 Oct', r: 5, t: 'this is the the best practice app for english' },
+    { n: 'Ajay Bhai', d: '29 Oct', r: 5, t: 'Very best app' },
+    { n: 'Trisha Parihaar', d: '29 Oct', r: 5, t: 'good 😊' },
+    { n: 'Leeladhar Kumawat', d: '28 Oct', r: 5, t: 'this app is very useful for all SSC aspirants who are preparing for the exam,so useful' },
+    { n: 'Shoury Yadav', d: '22 Oct', r: 5, t: 'amazing app and easy to learn' },
+    { n: 'Atul Kuwar', d: '10 Oct', r: 5, t: 'THIS APP IS VERY HELPFUL FOR SSC ASPIRANTS' },
+    { n: 'Abhishek Ranjan', d: '9 Oct', r: 5, t: 'very helpful for revise purpose' },
+    { n: 'Venkatesh Badhavathu', d: '8 Oct', r: 5, t: 'best app I saw in recent times.They changed monster vocab into puppet game.' },
+    { n: 'Vishal Ahire', d: '8 Oct', r: 5, t: 'it is very good app, it is in english with marathi meaning' },
+    { n: 'Sk Ana', d: '8 Oct', r: 5, t: 'Bhaiya, please add mock test in this also, please.', note: 'Translated from Hindi' },
+    { n: 'Vinit Kumar', d: '8 Oct', r: 5, t: 'incredible' },
+    { n: 'Rohit Rohan', d: '6 Oct', r: 5, t: 'i found many app but this one of the best app for every appeart' },
+    { n: 'Nishu Kumari', d: '6 Oct', r: 5, t: 'nice app best for compatative student' },
+    { n: 'Aditya Maurya', d: '6 Oct', r: 5, t: 'amazing revison ke liye best h... 🫶 Thank u white ocean' },
+    { n: 'Ankan Ghosh', d: '6 Oct', r: 5, t: 'outstanding sir' },
+    { n: 'Kamlesh Bhardwaj', d: '5 Oct', r: 5, t: 'very helpful for the ssc exam' }
+  ];
+  var AV = ['#4F6A8F', '#7A6A55', '#5E7B66', '#8A5F5F', '#6A5F86', '#4E7C80'];
+  function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  function starsHTML(n) {
+    var h = '';
+    for (var i = 0; i < 5; i++) h += '<svg viewBox="0 0 24 24" fill="' + (i < n ? 'var(--gold)' : 'var(--star-empty)') + '"><path d="' + STAR + '"/></svg>';
+    return h;
+  }
+  function cardHTML(rv, i) {
+    return '<article class="rv-card" data-i="' + i + '">' +
+      '<div class="rv-top"><div class="rv-av" style="--av:' + AV[i % AV.length] + '">' + rv.n.charAt(0).toUpperCase() + '</div>' +
+      '<div><div class="rv-name">' + esc(rv.n) + '</div><div class="rv-date">' + rv.d + ' 2026</div></div></div>' +
+      '<div class="rv-stars" role="img" aria-label="' + rv.r + ' out of 5 stars">' + starsHTML(rv.r) + '</div>' +
+      '<p class="rv-text">' + esc(rv.t) + '</p>' +
+      (rv.note ? '<div class="rv-note">' + rv.note + '</div>' : '') +
+      '<div class="rv-foot"><span class="mark">WO</span> Replied by WhiteOceanBook</div>' +
+      '</article>';
+  }
+
+  var N = reviews.length;
+  var track = document.getElementById('rvTrack');
+  var viewport = document.getElementById('rvViewport');
+  var countEl = document.getElementById('rvCount');
+  var html = '';
+  for (var c = 0; c < 3; c++) reviews.forEach(function (rv, i) { html += cardHTML(rv, i); });
+  track.innerHTML = html;
+  var cards = Array.prototype.slice.call(track.children);
+  var idx = N; // start on first card of the middle copy
+
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function position(animate) {
+    if (!animate) track.classList.add('jump');
+    var card = cards[idx];
+    var x = viewport.clientWidth / 2 - (card.offsetLeft + card.offsetWidth / 2);
+    track.style.transform = 'translate3d(' + x + 'px,0,0)';
+    cards.forEach(function (el, k) { el.classList.toggle('is-active', k === idx); });
+    countEl.innerHTML = '<b>' + pad((idx % N) + 1) + '</b> / ' + N;
+    if (!animate) { void track.offsetWidth; track.classList.remove('jump'); }
+  }
+  function normalize() {
+    if (idx >= 2 * N) { idx -= N; position(false); }
+    else if (idx < N) { idx += N; position(false); }
+  }
+  function go(step) {
+    if (idx + step >= 3 * N || idx + step < 0) normalize();
+    idx += step;
+    position(true);
+  }
+  track.addEventListener('transitionend', function (e) { if (e.target === track && e.propertyName === 'transform') normalize(); });
+
+  cards.forEach(function (el, k) {
+    el.addEventListener('click', function () { if (k !== idx) { idx = k; position(true); restart(); } });
+  });
+  document.getElementById('rvNext').addEventListener('click', function () { go(1); restart(); });
+  document.getElementById('rvPrev').addEventListener('click', function () { go(-1); restart(); });
+
+  // swipe
+  var sx = null;
+  viewport.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; stop(); }, { passive: true });
+  viewport.addEventListener('touchend', function (e) {
+    if (sx === null) return;
+    var dx = e.changedTouches[0].clientX - sx;
+    if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
+    sx = null; start();
+  });
+
+  // autoplay
+  var auto = null;
+  function start() { if (!reduceMotion && !auto) auto = setInterval(function () { go(1); }, 3200); }
+  function stop() { clearInterval(auto); auto = null; }
+  function restart() { stop(); start(); }
+  viewport.addEventListener('mouseenter', stop);
+  viewport.addEventListener('mouseleave', start);
+  document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
+
+  var rt;
+  window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { position(false); }, 120); });
+  position(false);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { position(false); });
+  start();
+})();
+</script>
 </body>
 </html>
