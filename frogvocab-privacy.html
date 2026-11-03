@@ -3,131 +3,274 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FrogVocab – Privacy Policy</title>
-<meta name="description" content="Privacy Policy for the FrogVocab Android app by WhiteOceanBook.">
+<title>FrogVocab – Privacy Policy &amp; Refund Policy</title>
+<meta name="description" content="Privacy Policy and Pro refund policy for the FrogVocab Android app by WhiteOceanBook.">
+<meta name="color-scheme" content="light dark">
 <style>
   :root {
     --bg: #F4FBF7; --card: #FFFFFF; --text: #12312F; --muted: #4D6B67;
-    --accent: #2A7F79; --border: #D7EAE2;
+    --accent: #1F7A73; --accent-soft: #E3F4EE; --border: #D7EAE2;
+    --head: #0E3B43; --head-text: #FFFFFF; --lime: #C9F27B;
+    --note: #FFF7E0; --note-border: #F2D58A;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #0B1726; --card: #13233A; --text: #E8F1F5; --muted: #A9BCC9; --accent: #5FD0C3; --border: #22385A; }
+    :root {
+      --bg: #0B1726; --card: #13233A; --text: #E8F1F5; --muted: #A9BCC9;
+      --accent: #5FD0C3; --accent-soft: #17324A; --border: #22385A;
+      --head: #0A2E35; --note: #2A2617; --note-border: #5C4E25;
+    }
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     margin: 0; background: var(--bg); color: var(--text);
     font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
     line-height: 1.65; font-size: 16px;
   }
-  main { max-width: 760px; margin: 0 auto; padding: 28px 16px 56px; }
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 28px 22px; }
-  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; }
-  h2 { font-size: 20px; margin: 32px 0 8px; color: var(--accent); }
+  header { background: var(--head); color: var(--head-text); }
+  .head-in { max-width: 820px; margin: 0 auto; padding: 34px 16px 30px; }
+  .brand { font-weight: 800; font-size: 15px; letter-spacing: .4px; opacity: .85; margin: 0 0 6px; }
+  .brand span { color: var(--lime); }
+  h1 { font-size: 32px; line-height: 1.2; margin: 0 0 12px; }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill { background: rgba(255,255,255,.12); border-radius: 999px; padding: 4px 12px; font-size: 13px; }
+  main { max-width: 820px; margin: 0 auto; padding: 22px 16px 56px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 24px 20px; margin-top: 16px; }
+  h2 { font-size: 20px; line-height: 1.3; margin: 0 0 8px; color: var(--accent); scroll-margin-top: 16px; }
   h3 { font-size: 16px; margin: 18px 0 4px; }
-  p, li { color: var(--text); }
-  .muted { color: var(--muted); font-size: 14px; }
-  ul { padding-left: 22px; margin: 6px 0; }
+  p { margin: 8px 0; }
+  ul, ol { padding-left: 22px; margin: 6px 0; }
   li { margin: 4px 0; }
-  a { color: var(--accent); }
-  .summary { background: var(--bg); border-radius: 14px; padding: 14px 18px; margin-top: 18px; }
+  a { color: var(--accent); text-underline-offset: 2px; overflow-wrap: anywhere; }
+  .muted { color: var(--muted); font-size: 14px; }
+  .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 12px; }
+  .sum { background: var(--accent-soft); border-radius: 14px; padding: 12px 14px; font-size: 15px; }
+  .sum strong { display: block; margin-bottom: 2px; }
+  .toc { columns: 2 220px; column-gap: 24px; margin: 8px 0 0; padding-left: 20px; }
+  .toc li { break-inside: avoid; }
+  .note { background: var(--note); border: 1px solid var(--note-border); border-radius: 14px; padding: 12px 16px; margin-top: 12px; }
+  .table-wrap { overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 15px; }
   th, td { text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
   th { color: var(--muted); font-weight: 600; }
-  footer { text-align: center; margin-top: 22px; }
+  .steps li { margin: 6px 0; }
+  code { background: var(--accent-soft); padding: 1px 6px; border-radius: 6px; font-size: 14px; }
+  footer { text-align: center; margin-top: 26px; }
 </style>
 </head>
 <body>
+
+<header>
+  <div class="head-in">
+    <p class="brand">Frog<span>Vocab</span> · by WhiteOceanBook</p>
+    <h1>Privacy Policy &amp; Refund Policy</h1>
+    <div class="pills">
+      <span class="pill">Last updated: 3 November 2026</span>
+      <span class="pill">Android app</span>
+      <span class="pill">No login · No account</span>
+    </div>
+  </div>
+</header>
+
 <main>
+
 <div class="card">
+  <p>This page explains how <strong>FrogVocab</strong> (the "App"), an English vocabulary game for Android published by <strong>WhiteOceanBook</strong> ("we", "us"), handles information, and how you can get a refund for a Pro purchase.</p>
+  <div class="summary">
+    <div class="sum"><strong>No account</strong>We never ask for your name, email or phone number to use the App.</div>
+    <div class="sum"><strong>On your device</strong>Your coins, frogs, progress and saved words stay on your phone.</div>
+    <div class="sum"><strong>No selling</strong>We have no servers of our own, and we never sell your data.</div>
+    <div class="sum"><strong>Google services</strong>Ads (AdMob) and payments (Google Play) are handled by Google.</div>
+    <div class="sum"><strong>Pay once</strong>Pro is a one-time payment. It is not a subscription and never renews on its own.</div>
+    <div class="sum"><strong>48-hour refund</strong>Ask by email or through Google Play within 48 hours of buying.</div>
+  </div>
+</div>
 
-<h1>FrogVocab – Privacy Policy</h1>
-<p class="muted">Effective date: 27 October 2026 · Developer: WhiteOceanBook</p>
+<div class="card">
+  <h2>Contents</h2>
+  <ol class="toc">
+    <li><a href="#device">Information stored on your device</a></li>
+    <li><a href="#ads">Advertising (Google AdMob)</a></li>
+    <li><a href="#pro">Pro purchases (Google Play)</a></li>
+    <li><a href="#refunds">Refund policy</a></li>
+    <li><a href="#notifications">Reminder notifications</a></li>
+    <li><a href="#play">Other Google Play features</a></li>
+    <li><a href="#email">When you email us</a></li>
+    <li><a href="#otherapp">WhiteOceanBook app button</a></li>
+    <li><a href="#permissions">Permissions</a></li>
+    <li><a href="#sharing">Sharing of information</a></li>
+    <li><a href="#retention">Data retention and deletion</a></li>
+    <li><a href="#children">Children's privacy</a></li>
+    <li><a href="#security">Security</a></li>
+    <li><a href="#changes">Changes to this policy</a></li>
+    <li><a href="#contact">Contact us</a></li>
+  </ol>
+</div>
 
-<p>This Privacy Policy explains how <strong>FrogVocab</strong> (the "App"), an English vocabulary game for Android published by <strong>WhiteOceanBook</strong> ("we", "us"), handles information when you use it.</p>
-
-<div class="summary">
-  <strong>In short:</strong>
+<div class="card">
+  <h2 id="device">1. Information stored on your device</h2>
+  <p>To make the game work, the App saves the following only in its private storage on your phone or tablet:</p>
   <ul>
-    <li>No sign-up, no login, and no account. We do not ask for your name, email or phone number.</li>
-    <li>Your progress, coins, bookmarks and settings are stored <strong>only on your device</strong>.</li>
-    <li>We do not run our own servers and we do not sell your data.</li>
-    <li>Ads are shown by <strong>Google AdMob</strong>, and the Pro subscription is handled by <strong>Google Play</strong>. These Google services process some data as described below.</li>
+    <li>Your progress in each topic (One Word Substitution, Synonyms + Antonyms, Idioms &amp; Phrases, Root Words and Phrasal Verbs) and in each level (Easy, Medium, Tough)</li>
+    <li>The current round, so you can continue from the same point after closing the App</li>
+    <li>Coins earned, frogs unlocked and the frog you are playing with</li>
+    <li>Words you have saved (bookmarked)</li>
+    <li>Settings: Light or Dark theme, sounds and background music</li>
+    <li>Your Pro status and the date it ends</li>
+    <li>Small app notes, such as whether we have already asked for notification permission or for a rating</li>
+  </ul>
+  <p>This information is not sent to us. If Android backup is turned on in your device settings, Android may include this game data in your device backup to your own Google account, under Google's terms. You can manage this in your phone's backup settings.</p>
+  <p>The App's sounds and music play from files inside the App. The App never records audio and does not use the microphone.</p>
+</div>
+
+<div class="card">
+  <h2 id="ads">2. Advertising (Google AdMob)</h2>
+  <p>Free users see ads served by Google AdMob:</p>
+  <ul>
+    <li>A full-screen ad may appear at a natural break: after you finish a round of 10 words and tap <em>Continue</em>.</li>
+    <li>A banner ad may appear at the bottom of the <em>Saved Words</em> screen.</li>
+  </ul>
+  <p>Users with an active Pro plan do not see ads. When your device is offline, the App shows its own short "Remove ads? Get PRO" card instead of an ad. No data is collected for this card.</p>
+  <p>To show and measure ads, Google may collect and process:</p>
+  <ul>
+    <li>Your device's <strong>Advertising ID</strong></li>
+    <li>Device and app information, such as device model, Android version and app version</li>
+    <li>IP address, which may be used to estimate an approximate (city or country level) location</li>
+    <li>Ad interactions, for example whether an ad was shown or clicked</li>
+  </ul>
+  <p>Google may use this information to deliver, personalise and measure ads, and to prevent fraud. If you are in the European Economic Area, the United Kingdom or Switzerland, the App shows Google's consent form so you can choose how your data is used for ads. You can reset your Advertising ID or opt out of personalised ads at any time in your Android settings (<em>Settings → Google → Ads</em>, or <em>Settings → Privacy → Ads</em>, depending on your device).</p>
+  <p>More information:</p>
+  <ul>
+    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+    <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from apps that use its services</a></li>
+    <li><a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ad Settings</a></li>
   </ul>
 </div>
 
-<h2>1. Information stored on your device</h2>
-<p>To make the game work, the App saves the following on your phone or tablet:</p>
-<ul>
-  <li>Words you have already seen, and your position in the word lists</li>
-  <li>Coins earned, frogs unlocked and the frog you selected</li>
-  <li>Words you have bookmarked</li>
-  <li>Settings such as theme (light/dark), sounds and reminders</li>
-  <li>Whether your Pro subscription is active</li>
-</ul>
-<p>This information is not sent to us. If Android backup is turned on in your device settings, Android may include this game data in your device backup to your own Google account, under Google's terms. You can manage this in your phone's backup settings.</p>
-
-<h2>2. Advertising (Google AdMob)</h2>
-<p>The free version of the App shows <strong>rewarded video ads</strong> through Google AdMob. Ads appear only when you choose to watch one, after every few words. Pro users do not see ads.</p>
-<p>To show and measure ads, Google may collect and process:</p>
-<ul>
-  <li>Your device's <strong>Advertising ID</strong></li>
-  <li>Device and app information (such as device model, operating system version and app version)</li>
-  <li>IP address, which may be used to estimate an approximate (city or country level) location</li>
-  <li>Ad interactions (for example, whether an ad was shown, watched or clicked)</li>
-</ul>
-<p>Google may use this information to deliver, personalise and measure ads, and to prevent fraud. If you are in the European Economic Area, the United Kingdom or Switzerland, the App shows Google's consent form so that you can choose how your data is used for ads. You can reset your Advertising ID or opt out of personalised ads at any time in your Android settings (<em>Settings → Google → Ads</em>, or <em>Settings → Privacy → Ads</em>, depending on your device).</p>
-<p>More information:</p>
-<ul>
-  <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
-  <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from apps that use its services</a></li>
-  <li><a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ad Settings</a></li>
-</ul>
-
-<h2>3. Purchases (Google Play Billing)</h2>
-<p>FrogVocab offers an optional <strong>Pro</strong> monthly subscription, which removes ads and unlocks all frogs. All payments are processed by <strong>Google Play</strong>. We never see or store your card, UPI or bank details.</p>
-<p>The App receives only the information it needs from Google Play to confirm your subscription, such as the product ID, purchase status and a purchase token. Because the subscription is linked to your Google account, Pro can be restored after reinstalling the App on the same Google account.</p>
-<p>You can cancel at any time in the Google Play Store under <em>Payments &amp; subscriptions → Subscriptions</em>. Google's terms and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a> apply to all payments.</p>
-
-<h2>4. Notifications</h2>
-<p>If you allow notifications, the App may show a friendly reminder when you have not played for a few hours. These reminders are scheduled <strong>locally on your device</strong>; they are not sent from a server, and no notification data is collected. You can turn reminders off in the App's Settings or in your Android notification settings at any time.</p>
-
-<h2>5. Permissions used by the App</h2>
-<table>
-  <tr><th>Permission</th><th>Why it is needed</th></tr>
-  <tr><td>Internet &amp; network state</td><td>To load ads and to talk to Google Play for the Pro subscription</td></tr>
-  <tr><td>Notifications</td><td>To show optional reminder notifications (only if you allow them)</td></tr>
-  <tr><td>Google Play Billing</td><td>To buy and restore the Pro subscription</td></tr>
-  <tr><td>Advertising ID</td><td>Used by Google AdMob for showing and measuring ads</td></tr>
-  <tr><td>Vibration</td><td>For small haptic feedback during the game</td></tr>
-</table>
-<p>The App does <strong>not</strong> access your camera, microphone, contacts, photos, files or precise location.</p>
-
-<h2>6. Sharing of information</h2>
-<p>We do not sell, rent or trade your information. Apart from the Google services described above (AdMob and Google Play), the App does not share information with any third party. We do not use any separate analytics or tracking tools.</p>
-
-<h2>7. Data retention and deletion</h2>
-<ul>
-  <li>Game data stays on your device until you clear the App's data or uninstall the App. Doing either deletes it.</li>
-  <li>Data processed by Google is kept according to Google's own policies. You can manage it from your Google account.</li>
-  <li>Because we do not hold any of your personal data on our own servers, there is nothing for us to delete on our side. If you have any request, contact us using the details below.</li>
-</ul>
-
-<h2>8. Children's privacy</h2>
-<p>FrogVocab is intended for users aged 13 and above and is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has used the App and want help, please contact us.</p>
-
-<h2>9. Security</h2>
-<p>Game data is stored in the App's private storage on your device, which other apps cannot read. Payments and ads are handled by Google over secure connections.</p>
-
-<h2>10. Changes to this policy</h2>
-<p>We may update this Privacy Policy from time to time. Any change will be posted on this page with a new effective date. Please check this page periodically.</p>
-
-<h2>11. Contact us</h2>
-<p>If you have any questions about this Privacy Policy or the App, please contact:</p>
-<p><strong>WhiteOceanBook</strong><br>
-Email: <a href="mailto:support@whiteoceanbook.com">support@whiteoceanbook.com</a><br>
-Website: <a href="https://whiteoceanbook.com">whiteoceanbook.com</a></p>
-
+<div class="card">
+  <h2 id="pro">3. Pro purchases (Google Play)</h2>
+  <p>FrogVocab offers optional <strong>Pro</strong> plans. Each plan is a <strong>one-time payment</strong>. It is <strong>not a subscription</strong> and nothing renews or charges you again automatically.</p>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Plan</th><th>What you get</th><th>How long</th></tr>
+    <tr><td>1 Month</td><td>No ads</td><td>30 days from purchase</td></tr>
+    <tr><td>Lifetime</td><td>No ads + every frog unlocked</td><td>3 years from purchase</td></tr>
+  </table>
+  </div>
+  <p>Frogs you unlocked with coins stay yours even after a Pro plan ends. Frogs unlocked only by the Lifetime plan lock again when it ends.</p>
+  <p>All payments are processed by <strong>Google Play</strong>. We never see or store your card, UPI or bank details. The App receives from Google Play only what it needs to confirm a purchase: the product ID, purchase status, purchase time and a purchase token. Because the purchase is linked to your Google account, Pro can be restored after you reinstall the App using the same Google account. Google's terms and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a> apply to all payments.</p>
 </div>
+
+<div class="card">
+  <h2 id="refunds">4. Refund policy</h2>
+  <p>If you bought a Pro plan by mistake or are not happy with it, you can ask for a refund <strong>within 48 hours of purchase</strong>, in either of these two ways:</p>
+
+  <h3>Option A: Through Google Play</h3>
+  <ol class="steps">
+    <li>Open your <a href="https://play.google.com/store/account/orderhistory" target="_blank" rel="noopener">Google Play order history</a> and sign in with the Google account you used to buy Pro.</li>
+    <li>Find the FrogVocab Pro order.</li>
+    <li>Choose <em>Request a refund</em> (or <em>Report a problem</em>) and follow the steps.</li>
+  </ol>
+  <p class="muted">You can also open the Google Play Store app → your profile picture → <em>Payments &amp; subscriptions</em> → <em>Budget &amp; history</em>.</p>
+
+  <h3>Option B: Email us</h3>
+  <p>Write to <a href="mailto:support@whiteoceanbook.com?subject=FrogVocab%20Pro%20refund">support@whiteoceanbook.com</a> with the subject <em>FrogVocab Pro refund</em> and include:</p>
+  <ul>
+    <li>Your Google Play <strong>order number</strong> (it starts with <code>GPA.</code> and is in your Google Play receipt email)</li>
+    <li>The Google account email you used to buy</li>
+    <li>The plan you bought (1 Month or Lifetime)</li>
+    <li>The reason for the refund (optional, but it helps us improve)</li>
+  </ul>
+  <p>We will check the order and, if it is within 48 hours of purchase, ask Google Play to refund it.</p>
+
+  <div class="note">
+    <ul>
+      <li>Refunds are paid by Google Play to your original payment method. The time it takes to show in your account depends on your bank or payment method.</li>
+      <li>When a purchase is refunded, it is cancelled and the Pro benefits from that purchase are no longer valid.</li>
+      <li>After 48 hours, refund requests are handled according to <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play's refund policy</a>, and as required by applicable law.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h2 id="notifications">5. Reminder notifications</h2>
+  <p>The App asks before sending notifications. If you allow them, the App may show a friendly reminder when you have not opened it for about 5 hours. These reminders are scheduled <strong>locally on your device</strong>. They are not sent from a server, and no notification data is collected.</p>
+  <p>You can turn reminders off at any time in <em>Android Settings → Apps → FrogVocab → Notifications</em>.</p>
+</div>
+
+<div class="card">
+  <h2 id="play">6. Other Google Play features</h2>
+  <ul>
+    <li><strong>Rating request:</strong> After you have learned some words, the App may ask Google Play to show its rating card. Google Play shows the card and handles your rating and review. We do not receive your name or account details from it.</li>
+    <li><strong>App updates:</strong> About once a day, the App may ask Google Play whether a newer version is available, so it can offer you the update.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2 id="email">7. When you email us</h2>
+  <p>The <em>Help</em> button in Settings opens your own email app with our address and a subject already filled in. The draft also includes your Android version to help us solve problems. You can see and change everything before you send it.</p>
+  <p>If you email us, for help or for a refund, we receive your email address and whatever you write. We use it only to reply to you and to handle your request. We do not add you to any mailing list. You can ask us to delete your emails at any time.</p>
+</div>
+
+<div class="card">
+  <h2 id="otherapp">8. WhiteOceanBook app button</h2>
+  <p>The App has a <em>Visit WhiteOceanBook</em> button for our other learning app. To make this button work, the App checks on your device whether the WhiteOceanBook app is installed. If it is, the button opens it. If not, the button opens its Google Play page. This check stays on your device and is not sent to us.</p>
+</div>
+
+<div class="card">
+  <h2 id="permissions">9. Permissions used by the App</h2>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Permission</th><th>Why it is needed</th></tr>
+    <tr><td>Internet &amp; network state</td><td>To load ads, to talk to Google Play for Pro purchases and updates, and to know when you are offline</td></tr>
+    <tr><td>Notifications</td><td>To show optional reminder notifications (only if you allow them)</td></tr>
+    <tr><td>Google Play Billing</td><td>To buy and restore Pro</td></tr>
+    <tr><td>Advertising ID</td><td>Used by Google AdMob to show and measure ads</td></tr>
+    <tr><td>Vibration</td><td>For small haptic feedback when you tap the frog</td></tr>
+    <tr><td>Audio settings</td><td>To play game sounds and background music correctly</td></tr>
+  </table>
+  </div>
+  <p>The App does <strong>not</strong> access your camera, microphone, contacts, photos, files or precise location.</p>
+</div>
+
+<div class="card">
+  <h2 id="sharing">10. Sharing of information</h2>
+  <p>We do not sell, rent or trade your information. Apart from the Google services described above (AdMob and Google Play), the App does not share information with any third party. We do not use any separate analytics, tracking or crash-reporting tools.</p>
+</div>
+
+<div class="card">
+  <h2 id="retention">11. Data retention and deletion</h2>
+  <ul>
+    <li>Game data stays on your device until you clear the App's data or uninstall the App. Doing either deletes it.</li>
+    <li>Pro purchases are kept by Google Play in your Google account, so they can be restored later.</li>
+    <li>Data processed by Google is kept according to Google's own policies. You can manage it from your Google account.</li>
+    <li>Emails you send us are kept only as long as needed to answer you or handle your refund. Ask us and we will delete them.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2 id="children">12. Children's privacy</h2>
+  <p>FrogVocab is intended for users aged 13 and above and is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has used the App and want help, please contact us.</p>
+</div>
+
+<div class="card">
+  <h2 id="security">13. Security</h2>
+  <p>Game data is stored in the App's private storage on your device, which other apps cannot read. Payments and ads are handled by Google over secure connections.</p>
+</div>
+
+<div class="card">
+  <h2 id="changes">14. Changes to this policy</h2>
+  <p>We may update this policy from time to time. Any change will be posted on this page with a new "Last updated" date. Please check this page from time to time.</p>
+</div>
+
+<div class="card">
+  <h2 id="contact">15. Contact us</h2>
+  <p>For questions about this policy, the App or a refund, please contact:</p>
+  <p><strong>WhiteOceanBook</strong><br>
+  Email: <a href="mailto:support@whiteoceanbook.com">support@whiteoceanbook.com</a><br>
+  Website: <a href="https://whiteoceanbook.com" target="_blank" rel="noopener">whiteoceanbook.com</a></p>
+</div>
+
 <footer class="muted">© 2026 WhiteOceanBook · FrogVocab</footer>
 </main>
 </body>
