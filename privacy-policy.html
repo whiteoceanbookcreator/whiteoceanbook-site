@@ -4,100 +4,182 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Privacy Policy — WhiteOceanBook</title>
-<meta name="description" content="Privacy Policy for the WhiteOceanBook app. We do not collect any personal data ourselves. Banner ads in the free version are served by Google AdMob. All progress is stored only on your device." />
+<meta name="description" content="Privacy Policy for the WhiteOceanBook app. We do not collect any personal data ourselves. The free version shows banner and interstitial ads served by Google AdMob and has some locked sets; Pro removes all ads and unlocks every set. All progress is stored only on your device." />
+<meta name="theme-color" content="#F7F6F2" />
+<link rel="canonical" href="https://whiteoceanbook.com/privacy-policy.html" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/logo-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/logo-180.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --navy: #15173D;
-    --navy-deep: #0F1130;
-    --blue: #1D4ED8;
-    --amber: #F59E0B;
-    --bg: #DDEAE5;
+    /* new WhiteOceanBook theme */
+    --paper: #F7F6F2;
     --surface: #FFFFFF;
-    --text: #0F172A;
-    --muted: #64748B;
-    --border: #E3E8F2;
+    --ink: #1A2033;
+    --ink-2: #3A4157;
+    --muted: #5F6578;
+    --line: #E4E1D9;
+    --line-2: #D6D2C8;
+    --accent: #2D4A86;
+    --accent-soft: #ECEFF6;
+    --sage: #EEF2EB;
+    --sage-line: #D8E1D3;
+    --green: #3D6A47;
     --radius: 18px;
-    --shadow: 0 10px 30px rgba(15,23,61,0.08);
+    --shadow-sm: 0 1px 2px rgba(26, 32, 51, 0.05);
+    /* header / footer fonts (same as home page) */
+    --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+    --nav-sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     font-family: 'Inter', system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text);
+    background: var(--paper);
+    color: var(--ink);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }
   h1, h2 { font-family: 'Plus Jakarta Sans', sans-serif; }
   .wrap { width: 100%; max-width: 860px; margin: 0 auto; padding: 0 20px; }
+  .wrap-wide { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  a { color: inherit; }
 
+  /* ===== HEADER (same as home page) ===== */
   nav {
     position: sticky; top: 0; z-index: 50;
-    background: rgba(221,234,229,0.85);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(21,23,61,0.06);
+    background: rgba(247, 246, 242, 0.88);
+    backdrop-filter: saturate(1.2) blur(12px);
+    -webkit-backdrop-filter: saturate(1.2) blur(12px);
+    border-bottom: 1px solid var(--line);
+    font-family: var(--nav-sans);
   }
-  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; font-family: 'Plus Jakarta Sans'; color: var(--navy); text-decoration: none; }
-  .logo { width: 34px; height: 34px; border-radius: 9px; background: #fff; color: var(--blue);
-    display: grid; place-items: center; font-weight: 800; font-size: 13px; border: 1px solid var(--border); }
-  .back { font-size: 14px; font-weight: 600; color: var(--blue); text-decoration: none; }
-  .back:hover { text-decoration: underline; }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 11px; font-family: var(--serif); font-weight: 600; font-size: 21px; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
+  .mark {
+    width: 32px; height: 32px; border-radius: 8px; background: var(--ink); color: #fff;
+    display: grid; place-items: center; font-family: var(--nav-sans); font-weight: 800; font-size: 11.5px; letter-spacing: 0.04em;
+  }
+  .nav-right { display: flex; align-items: center; gap: 22px; }
+  .back { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--ink-2); text-decoration: none; }
+  .back svg { width: 15px; height: 15px; }
+  .back:hover { color: var(--ink); }
+  .nav-cta {
+    display: inline-flex; align-items: center; gap: 8px; background: var(--ink); color: #fff; text-decoration: none;
+    font-weight: 700; font-size: 13.5px; padding: 9px 16px; border-radius: 999px; white-space: nowrap; transition: background .2s ease;
+  }
+  .nav-cta:hover { background: #2A3250; }
+  .play-ico { width: 12px; height: 14px; flex-shrink: 0; }
+  @media (max-width: 560px) { .nav-cta { display: none; } .brand { font-size: 19px; } }
 
-  header.page { padding: 46px 0 10px; }
-  .eyebrow { color: var(--blue); font-weight: 700; font-size: 13px; letter-spacing: 1.4px; text-transform: uppercase; }
-  h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 800; color: var(--navy); margin-top: 8px; }
+  /* ===== PAGE HEADER ===== */
+  header.page { padding-top: 56px; padding-bottom: 8px; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--accent); font-weight: 700; font-size: 12.5px; letter-spacing: 1.6px; text-transform: uppercase;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 1px; background: currentColor; }
+  h1 { font-size: clamp(30px, 5vw, 42px); font-weight: 800; color: var(--ink); margin-top: 10px; letter-spacing: -0.01em; }
   .updated { font-size: 14px; color: var(--muted); margin-top: 8px; }
 
-  main { padding: 26px 0 60px; }
+  /* ===== CONTENT ===== */
+  main { padding-top: 28px; padding-bottom: 70px; }
   .card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-    padding: 34px; box-shadow: var(--shadow);
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 38px; box-shadow: var(--shadow-sm);
   }
-  .card h2 { color: var(--navy); font-size: 19px; margin: 26px 0 8px; }
+  @media (max-width: 560px) { .card { padding: 26px 20px; } }
+  .card h2 { color: var(--ink); font-size: 19px; margin: 30px 0 8px; }
   .card h2:first-child { margin-top: 0; }
   .card p, .card li { color: var(--muted); font-size: 15.5px; }
+  .card p + p { margin-top: 10px; }
   .card ul { margin: 8px 0 0 20px; }
+  .card ul + p { margin-top: 10px; }
   .card li { margin-bottom: 6px; }
-  .card strong { color: var(--text); }
-  .card a { color: var(--blue); font-weight: 600; text-decoration: none; }
+  .card li::marker { color: var(--line-2); }
+  .card strong { color: var(--ink); }
+  .card a { color: var(--accent); font-weight: 600; text-decoration: none; }
   .card a:hover { text-decoration: underline; }
-  .divider { height: 1px; background: var(--border); margin: 26px 0; }
+  .divider { height: 1px; background: var(--line); margin: 30px 0; }
 
-  footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 30px 0; }
-  .foot-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; font-size: 14px; }
-  footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  /* Free vs Pro summary */
+  .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 20px; }
+  @media (max-width: 560px) { .plans { grid-template-columns: 1fr; } }
+  .plan { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; background: #FBFAF7; }
+  .plan.pro { background: var(--sage); border-color: var(--sage-line); }
+  .plan h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 800; color: var(--ink); letter-spacing: .2px; }
+  .plan.pro h3 { color: var(--green); }
+  .plan ul { list-style: none; margin: 10px 0 0; }
+  .plan li { position: relative; padding-left: 20px; font-size: 14.5px; margin-bottom: 5px; color: var(--ink-2); }
+  .plan li::before { content: ""; position: absolute; left: 2px; top: 10px; width: 7px; height: 7px; border-radius: 50%; background: var(--line-2); }
+  .plan.pro li::before { background: var(--green); }
+
+  /* ===== FOOTER (same as home page) ===== */
+  footer { background: #131828; color: rgba(255,255,255,0.62); padding: 34px 0; font-family: var(--nav-sans); }
+  .foot-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 14px; }
+  .foot-brand { display: flex; align-items: center; gap: 10px; color: #fff; font-family: var(--serif); font-weight: 600; font-size: 19px; }
+  .foot-brand .mark { background: #fff; color: var(--ink); }
+  footer a { color: rgba(255,255,255,0.62); text-decoration: none; }
   footer a:hover { color: #fff; }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="wrap nav-inner">
-    <a class="brand" href="/"><span class="logo">WO</span> WhiteOceanBook</a>
-    <a class="back" href="/">Back to Home</a>
+  <div class="wrap-wide nav-inner">
+    <a class="brand" href="/"><span class="mark">WO</span> WhiteOceanBook</a>
+    <div class="nav-right">
+      <a class="back" href="/">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.5 4.5L7 10l5.5 5.5"/></svg>
+        Back to Home
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.whiteoceanbook.app" class="nav-cta" target="_blank" rel="noopener">
+        <svg class="play-ico" viewBox="0 0 14 16" aria-hidden="true"><path d="M1 1.5v13a1 1 0 0 0 1.5.87l11-6.5a1 1 0 0 0 0-1.74l-11-6.5A1 1 0 0 0 1 1.5z" fill="currentColor"/></svg>
+        Get the app
+      </a>
+    </div>
   </div>
 </nav>
 
 <header class="page wrap">
   <div class="eyebrow">Your data</div>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 24 October 2026</p>
+  <p class="updated">Last updated: 3 November 2026</p>
 </header>
 
 <main class="wrap">
   <div class="card">
     <h2>Introduction</h2>
-    <p>This Privacy Policy describes how the <strong>WhiteOceanBook</strong> mobile application ("the app", "we", "our") handles information. WhiteOceanBook is an offline English vocabulary practice app for SSC, Banking and other government exam aspirants. Your privacy matters to us, and we have designed the app so that <strong>we do not collect any personal data</strong> ourselves. The free version of the app shows banner ads provided by <strong>Google AdMob</strong> (see the "Advertising" section below).</p>
+    <p>This Privacy Policy describes how the <strong>WhiteOceanBook</strong> mobile application ("the app", "we", "our") handles information. WhiteOceanBook is an offline English vocabulary practice app for SSC, Banking and other government exam aspirants. Your privacy matters to us, and we have designed the app so that <strong>we do not collect any personal data</strong> ourselves. The free version of the app shows <strong>banner ads</strong> and <strong>interstitial (full-screen) ads</strong> provided by <strong>Google AdMob</strong>, and some question sets are <strong>locked</strong>. The optional <strong>Pro</strong> version removes all ads and unlocks every set (see the "Advertising" and "Free version, locked sets &amp; Pro" sections below).</p>
+
+    <div class="plans">
+      <div class="plan">
+        <h3>Free version</h3>
+        <ul>
+          <li>Banner ads on some screens</li>
+          <li>Interstitial (full-screen) ads</li>
+          <li>Some question sets are locked</li>
+        </ul>
+      </div>
+      <div class="plan pro">
+        <h3>Pro version</h3>
+        <ul>
+          <li>No ads of any kind</li>
+          <li>Full access to all question sets</li>
+          <li>One-time purchase via Google Play</li>
+        </ul>
+      </div>
+    </div>
 
     <h2>Information we collect</h2>
     <p>We (the developer) do <strong>not</strong> collect, store, transmit, or share any personal information. Specifically:</p>
     <ul>
       <li>No account, sign-up, email, or phone number is required to use the app.</li>
       <li>We do not collect your name, contacts, photos, location, or files.</li>
-      <li>We do not use our own analytics or tracking tools inside the app. Google AdMob, which shows the banner ads, may collect some device data as described in the "Advertising" section below.</li>
+      <li>We do not use our own analytics or tracking tools inside the app. Google AdMob, which shows the banner and interstitial ads, may collect some device data as described in the "Advertising" section below.</li>
       <li>No personal data is sent from your device to us. Optional in-app purchases are handled by Google Play (see the "In-app purchases &amp; payments" section below), and ads are handled by Google AdMob (see the "Advertising" section below).</li>
     </ul>
 
@@ -112,19 +194,32 @@
     <p>This data never leaves your phone. It is not visible to us or anyone else. Uninstalling the app permanently deletes this data.</p>
 
     <h2>Advertising</h2>
-    <p>To keep the app free, the free version shows a small <strong>banner ad</strong> at the bottom of some screens (not on the Home screen). These ads are provided by <strong>Google AdMob</strong>, an advertising service of Google.</p>
+    <p>To keep the app free, the free version shows two types of ads, both provided by <strong>Google AdMob</strong>, an advertising service of Google:</p>
+    <ul>
+      <li><strong>Banner ads</strong> — a small ad at the bottom of some screens (not on the Home screen).</li>
+      <li><strong>Interstitial ads</strong> — full-screen ads that may appear at natural breaks while you use the app, for example when moving between screens. You can close an interstitial ad and continue where you left off.</li>
+    </ul>
+    <p>How Google AdMob handles information:</p>
     <ul>
       <li>To show and measure ads, Google AdMob may automatically collect certain information from your device, such as your device's <strong>Advertising ID</strong>, <strong>approximate location</strong> (based on your IP address), device and app information, <strong>interactions with ads</strong> (for example, ad views and taps), and <strong>crash and diagnostic</strong> information.</li>
       <li>This information is used by Google to show ads, measure ad performance, and prevent fraud and abuse. It is collected and processed by Google, not by us — we never receive it in a form that identifies you.</li>
       <li>Google AdMob does <strong>not</strong> receive your quiz progress, bookmarks, or any other study data from the app.</li>
       <li>Ads may be personalised based on your interests. You can turn off ad personalisation or reset or delete your Advertising ID at any time in your phone's <strong>Settings → Google → Ads</strong>.</li>
       <li>If you are in a region where consent is required by law (such as the European Economic Area or the UK), the app will ask for your consent through Google's consent form before showing ads.</li>
-      <li><strong>Pro users see no ads.</strong> Buying any Pro plan removes all ads for as long as the plan is active.</li>
+      <li><strong>Pro users see no ads.</strong> Buying any Pro plan removes all ads — both banner and interstitial — for as long as the plan is active.</li>
       <li>To learn how Google uses this information, please see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from apps that use its services</a>.</li>
     </ul>
 
+    <h2>Free version, locked sets &amp; Pro</h2>
+    <p>In the free version, some question sets are <strong>locked</strong>. You can still practise all the sets that are open to you without any purchase.</p>
+    <ul>
+      <li><strong>Pro</strong> gives you <strong>full access to all question sets</strong> and removes all ads.</li>
+      <li>Whether a set is locked or unlocked is decided <strong>on your device</strong>, based on whether Pro is active. No information about which sets you open is sent to us.</li>
+      <li>Locking sets does not involve collecting any extra data from you.</li>
+    </ul>
+
     <h2>In-app purchases &amp; payments</h2>
-    <p>The app offers optional <strong>one-time in-app purchases</strong> (a "Pro" unlock that, for example, unlocks all question sets and removes all ads). Buying Pro is completely optional — the app is fully usable without any purchase.</p>
+    <p>The app offers optional <strong>one-time in-app purchases</strong> (a "Pro" unlock that unlocks all question sets and removes all ads). Buying Pro is completely optional — the free version can be used without any purchase, with ads and some sets locked.</p>
     <ul>
       <li>All payments are processed securely by <strong>Google Play</strong>. We never see, receive, or store your card, bank, UPI, or any other payment details.</li>
       <li>WhiteOceanBook does <strong>not</strong> collect or store any of your payment or billing information.</li>
@@ -139,7 +234,7 @@
       <li>Refund requests raised within <strong>48 hours of the transaction</strong> will be honoured.</li>
       <li>You can request the refund directly through <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play</a>, or write to us at <a href="mailto:support@whiteoceanbook.com">support@whiteoceanbook.com</a> with your Google Play <strong>order ID</strong>, and we will help you process it.</li>
       <li>After 48 hours, refunds are handled at the discretion of Google Play under its standard refund policy.</li>
-      <li>Once a refund is issued, Pro access is removed and the app returns to its free version.</li>
+      <li>Once a refund is issued, Pro access is removed and the app returns to its free version (with ads and some sets locked).</li>
     </ul>
 
     <h2>Restoring your unlimited access</h2>
@@ -148,7 +243,7 @@
       <li><strong>Uninstall the app</strong>, or</li>
       <li><strong>Clear the app's data</strong> from your phone's settings</li>
     </ul>
-    <p>This does <strong>not</strong> mean you have lost what you paid for. Google Play keeps the official record of your purchase.</p>
+    <p>This does <strong>not</strong> mean you have lost what you paid for. Google Play keeps the official record of your purchase. Until your access is restored, the app on that device works as the free version (with ads and some sets locked).</p>
     <ul>
       <li>To get your unlimited access back, write to <a href="mailto:support@whiteoceanbook.com">support@whiteoceanbook.com</a> and claim it. Please send the message from the email address linked to your Google Play account and include your <strong>Google Play order ID</strong> if you have it.</li>
       <li>We will verify your purchase and restore your unlimited access.</li>
@@ -157,18 +252,18 @@
     </ul>
 
     <h2>Permissions</h2>
-    <p>The app does not request access to your camera, microphone, contacts, location, or storage files. All study features work fully offline. To show banner ads in the free version, the app uses an internet connection and the device's <strong>Advertising ID</strong> (permission <em>com.google.android.gms.permission.AD_ID</em>), which is used only by Google AdMob as described in the "Advertising" section.</p>
+    <p>The app does not request access to your camera, microphone, contacts, location, or storage files. All study features work fully offline. To show banner and interstitial ads in the free version, the app uses an internet connection and the device's <strong>Advertising ID</strong> (permission <em>com.google.android.gms.permission.AD_ID</em>), which is used only by Google AdMob as described in the "Advertising" section.</p>
 
     <h2>Third-party services</h2>
     <p>The app uses only these third-party services:</p>
     <ul>
       <li><strong>Google Play</strong> — processes optional in-app purchases, as described above.</li>
-      <li><strong>Google AdMob</strong> — shows banner ads in the free version, as described in the "Advertising" section.</li>
+      <li><strong>Google AdMob</strong> — shows banner and interstitial ads in the free version, as described in the "Advertising" section.</li>
     </ul>
     <p>No other third-party services that collect data are used. Question content, progress tracking, and all study features run locally on your device.</p>
 
     <h2>Children's privacy</h2>
-    <p>The app is an educational tool suitable for students and the general public. It is not directed at children under 13, and we do not knowingly collect any personal information from anyone, including children under 13. We collect no data ourselves; the banner ads in the free version are served by Google AdMob under Google's policies. If you are a parent or guardian and believe otherwise, please contact us and we will address it promptly.</p>
+    <p>The app is an educational tool suitable for students and the general public. It is not directed at children under 13, and we do not knowingly collect any personal information from anyone, including children under 13. We collect no data ourselves; the banner and interstitial ads in the free version are served by Google AdMob under Google's policies. If you are a parent or guardian and believe otherwise, please contact us and we will address it promptly.</p>
 
     <h2>Data security</h2>
     <p>Because your data (progress, bookmarks, settings) is stored only on your device and never transmitted to us, there is no server-side data held by us that could be exposed. The only data that leaves your device is the advertising data handled by Google AdMob, as described in the "Advertising" section. We additionally follow Android best practices, such as disabling app data backup extraction, to keep your local data private to the app.</p>
@@ -199,7 +294,8 @@
 </main>
 
 <footer>
-  <div class="wrap foot-inner">
+  <div class="wrap-wide foot-inner">
+    <div class="foot-brand"><span class="mark">WO</span> WhiteOceanBook</div>
     <div>© 2026 WhiteOceanBook · All rights reserved</div>
     <div><a href="/">Home</a> &nbsp;·&nbsp; <a href="/#contact">Contact</a></div>
   </div>
