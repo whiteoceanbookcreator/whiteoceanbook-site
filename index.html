@@ -73,6 +73,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&text=WOVocab&display=swap" rel="stylesheet" />
 <style>
   :root {
     --paper: #F7F6F2;
@@ -190,6 +191,21 @@
   .hero { padding: 76px 0 70px; }
   .hero-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 64px; align-items: center; }
   @media (max-width: 920px) { .hero-grid { grid-template-columns: 1fr; gap: 44px; } }
+  /* App icon (WO Vocab) — drawn with HTML/CSS, no image */
+  .app-id { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+  .app-logo {
+    --s: 84px;
+    width: var(--s); height: var(--s); font-size: var(--s); flex-shrink: 0;
+    border-radius: 0.23em; background: #fff; border: 1px solid var(--line);
+    box-shadow: 0 1px 2px rgba(26, 32, 51, 0.05), 0 10px 24px -14px rgba(26, 32, 51, 0.35);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: 'Baloo 2', var(--sans); font-weight: 800; user-select: none;
+  }
+  .app-logo .lw { color: #1D4ED8; font-size: 0.467em; line-height: 0.78; }
+  .app-logo .lv { color: #000; font-size: 0.215em; line-height: 0.8; margin-top: -0.0545em; }
+  .app-id-text b { display: block; font-size: 15px; font-weight: 700; color: var(--ink); line-height: 1.35; }
+  .app-id-text span { display: block; font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+  @media (max-width: 420px) { .app-logo { --s: 72px; } }
   .hero h1 {
     font-family: var(--serif); font-weight: 500; font-size: clamp(40px, 5.6vw, 68px);
     line-height: 1.04; letter-spacing: -0.025em; margin-top: 22px; max-width: 700px;
@@ -241,6 +257,8 @@
   @media (max-width: 960px) { .fgrid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px) { .fgrid { grid-template-columns: 1fr; } }
   .f { background: var(--surface); padding: 30px 26px 32px; transition: background .25s ease; }
+  .f:last-child { grid-column: span 2; }
+  @media (max-width: 560px) { .f:last-child { grid-column: auto; } }
   .f:hover { background: #FCFBF8; }
   .f .n { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--accent); }
   .f h3 { font-size: 17px; font-weight: 700; margin-top: 18px; letter-spacing: -0.005em; }
@@ -422,6 +440,13 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div class="reveal">
+      <div class="app-id">
+        <div class="app-logo" role="img" aria-label="WO Vocab app icon"><span class="lw">WO</span><span class="lv">Vocab</span></div>
+        <div class="app-id-text">
+          <b>Look for this icon on Google Play</b>
+          <span>Published by WhiteOceanBook</span>
+        </div>
+      </div>
       <div class="kicker">English Vocabulary · SSC &amp; Others</div>
       <h1>Master English <em>vocabulary</em> for SSC, Banking &amp; competitive exams.</h1>
       <div class="hero-stat"><span>20,000+ Questions</span><span>Inspired by PYQs</span></div>
@@ -453,7 +478,7 @@
         <div><b data-to="5" data-suffix="K+">0</b><span>Downloads</span></div>
         <div><b data-to="20000" data-suffix="+" data-comma="1">0</b><span>Questions</span></div>
       </div>
-      <div class="rc-foot">No ads · No account · Works offline</div>
+      <div class="rc-foot">No account · Works offline · Pro: no ads</div>
     </aside>
   </div>
 </header>
@@ -474,7 +499,6 @@
       <div class="f"><div class="n">05</div><h3>Track by Colour</h3><p>Each set is colour-coded by your latest accuracy, so you instantly see where you're strong and weak.</p></div>
       <div class="f"><div class="n">06</div><h3>Bookmarks</h3><p>Save tricky questions and revise them later in one place.</p></div>
       <div class="f"><div class="n">07</div><h3>Dark Mode</h3><p>Comfortable reading day or night, with a clean high-contrast design.</p></div>
-      <div class="f"><div class="n">08</div><h3>No Ads, No Account</h3><p>Completely ad-free and no sign-up. Your progress stays on your own device.</p></div>
     </div>
   </div>
 </section>
@@ -636,8 +660,9 @@
       <h2 class="section-title">Privacy Policy</h2>
     </div>
     <div class="privacy reveal">
-      <p class="updated">Last updated: 28 sept 2026</p>
-      <p style="margin-top:12px">WhiteOceanBook does <strong>not collect any personal data</strong>. No account is needed, and your quiz progress, bookmarks, focus sessions and settings are saved only on your own device — they never leave your phone. All app data is permanently deleted when you uninstall the app or use Clear Data from App info. The current version of the app shows <strong>no advertisements</strong> and uses no third-party tracking.</p>
+      <p class="updated">Last updated: 3 November 2026</p>
+      <p style="margin-top:12px">WhiteOceanBook does <strong>not collect any personal data</strong>. No account is needed, and your quiz progress, bookmarks, focus sessions and settings are saved only on your own device — they never leave your phone. All app data is permanently deleted when you uninstall the app or use Clear Data from App info.</p>
+      <p style="margin-top:12px">The free version shows <strong>banner and interstitial ads</strong> served by <strong>Google AdMob</strong>, and some question sets are locked. <strong>Pro</strong> removes all ads and gives full access to every set. Payments are handled by Google Play.</p>
       <p style="margin-top:12px">Read the complete policy here:</p>
       <p style="margin-top:16px"><a href="/privacy-policy.html" class="btn btn-primary">Read Full Privacy Policy</a></p>
     </div>
