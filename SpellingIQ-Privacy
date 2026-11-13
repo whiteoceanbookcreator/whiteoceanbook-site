@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – Spelling IQ</title>
+<style>
+  :root { --bg:#f6f6f8; --card:#fff; --ink:#16161a; --muted:#5b5b66; --acc:#ffc93c; --line:#e4e4ea; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#111114; --card:#1b1b20; --ink:#f2f2f5; --muted:#a6a6b2; --line:#2c2c33; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:28px 16px 48px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:24px 20px; }
+  h1 { font-size:30px; line-height:1.2; margin:0 0 4px; }
+  h2 { font-size:20px; margin:30px 0 8px; padding-top:14px; border-top:1px solid var(--line); }
+  h3 { font-size:16px; margin:18px 0 4px; }
+  p, li { color:var(--ink); } ul { padding-left:20px; } li { margin:4px 0; }
+  .muted { color:var(--muted); font-size:14px; }
+  .tag { display:inline-block; background:var(--acc); color:#16161a; font-weight:700; font-size:13px; padding:3px 10px; border-radius:99px; margin-bottom:12px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; margin:8px 0; }
+  th, td { text-align:left; padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  a { color:inherit; }
+</style>
+</head>
+<body>
+<main>
+<div class="card">
+  <span class="tag">Spelling IQ</span>
+  <h1>Privacy Policy</h1>
+  <p class="muted">Effective date: 13 November 2026</p>
+
+  <p>This Privacy Policy explains how the Android app <strong>Spelling IQ</strong> (the "App"), published by <strong>WhiteOceanBook</strong> ("we", "us", "our"), handles information when you use it. We have built the App to collect as little as possible.</p>
+
+  <h2>1. Summary</h2>
+  <ul>
+    <li>No sign-up, no login and no account. We do not ask for your name, email or phone number inside the App.</li>
+    <li>Your progress, scores, Spelling IQ, bookmarks and settings are stored <strong>only on your device</strong>. We do not run any server that receives them.</li>
+    <li>If you do not have PRO, the App shows ads from <strong>Google AdMob</strong>, which collects some device information (see section 4).</li>
+    <li>Purchases are handled by <strong>Google Play</strong>. We never see your card, UPI or bank details.</li>
+    <li>We do not sell your personal information.</li>
+  </ul>
+
+  <h2>2. Information stored on your device</h2>
+  <p>To make the App work, the following is saved in the App's private storage on your phone or tablet:</p>
+  <ul>
+    <li>Quiz progress: which sets you played, your latest score in each set and the number of attempts</li>
+    <li>Your Spelling IQ score and the number of questions answered</li>
+    <li>Bookmarked questions</li>
+    <li>Settings: colour theme, light or dark mode, sound on or off</li>
+    <li>The date until which PRO is active</li>
+    <li>Whether you have already been asked to rate the App</li>
+  </ul>
+  <p>This information never leaves your device through us. It is deleted when you uninstall the App or clear its data in Android settings. If your device makes backups (for example Android's own backup to your Google account), that backup is controlled by Google and your device settings, not by us.</p>
+
+  <h2>3. Permissions the App uses</h2>
+  <table>
+    <tr><th>Permission</th><th>Why</th></tr>
+    <tr><td>Internet and network state</td><td>To load ads, connect to Google Play for purchases, updates and reviews.</td></tr>
+    <tr><td>Notifications</td><td>To show a practice reminder if you have not opened the App for a few hours. Android asks for your permission first, and you can turn it off at any time in Android settings.</td></tr>
+    <tr><td>Vibration</td><td>To give a short vibration when an answer is wrong.</td></tr>
+    <tr><td>Google Play Billing</td><td>To let you buy PRO.</td></tr>
+    <tr><td>Advertising ID</td><td>Used by Google AdMob to show and measure ads (see section 4).</td></tr>
+  </table>
+  <p>The App does <strong>not</strong> use your microphone, camera, contacts, location, photos or files.</p>
+
+  <h2>4. Advertising (Google AdMob)</h2>
+  <p>If you do not have PRO, the App shows ads after you submit a set and when you return home from the result screen. Ads are provided by Google AdMob. To show and measure ads and to prevent fraud, Google may collect and process:</p>
+  <ul>
+    <li>Your device's advertising ID</li>
+    <li>IP address and approximate location derived from it</li>
+    <li>Device and app information (model, Android version, language, app version)</li>
+    <li>Ad interactions (which ads were shown and tapped)</li>
+  </ul>
+  <p>This data is collected directly by Google under Google's own policies. We do not receive it in a form that identifies you. You can reset or delete your advertising ID, or opt out of personalised ads, in <em>Android Settings → Google → Ads</em> (or <em>Settings → Security &amp; privacy → Privacy → Ads</em> on newer phones).</p>
+  <p>Learn more: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from apps that use its services</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+  <p>PRO users do not see ads, and the App does not load ads for them.</p>
+
+  <h2>5. Purchases (Google Play Billing)</h2>
+  <p>PRO is sold as a one-time purchase through Google Play. Payment is handled entirely by Google. We do not receive or store your card, UPI or bank details. The App receives only the information it needs to unlock PRO: which product you bought, the purchase time and a purchase token from Google Play.</p>
+  <p>Your purchase is linked to your Google Play account, which allows PRO to be restored if you reinstall the App and sign in with the same Google account. Google's handling of payment data is described in the <a href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&amp;ldt=privacynotice" target="_blank" rel="noopener">Google Payments Privacy Notice</a>.</p>
+
+  <h2>6. Other Google Play features</h2>
+  <ul>
+    <li><strong>In-app review:</strong> the App may ask Google Play to show a rating prompt. Your rating and review go to Google Play, not to us, except what you choose to post publicly.</li>
+    <li><strong>In-app updates:</strong> the App asks Google Play whether a newer version is available.</li>
+  </ul>
+
+  <h2>7. Speaker voice</h2>
+  <p>When you tap the speaker button, the word is spoken by your device's own text-to-speech engine. The App sends no audio and records nothing.</p>
+
+  <h2>8. Reminders</h2>
+  <p>Practice reminders are created and scheduled on your device. They are not sent from a server, and no notification token is shared with us.</p>
+
+  <h2>9. When you contact us</h2>
+  <p>If you use "Feedback" or "Report a bug" in Settings, your email app opens with a message to us. If you send it, we receive your email address and whatever you write. We use it only to reply and to improve the App, and we delete it when it is no longer needed.</p>
+
+  <h2>10. Sharing</h2>
+  <p>When you share your result or the App, Android's share menu opens and you choose where the text goes. We do not see what you share or with whom.</p>
+
+  <h2>11. Children</h2>
+  <p>The App is not directed at children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has given us personal information (for example by email), contact us and we will delete it.</p>
+
+  <h2>12. Data security and retention</h2>
+  <p>Data on your device stays in the App's private storage, which other apps cannot read. Emails you send us are kept only as long as needed to answer you. We do not keep any other copy of your data.</p>
+
+  <h2>13. Your choices and rights</h2>
+  <ul>
+    <li>Delete all App data: uninstall the App, or go to <em>Android Settings → Apps → Spelling IQ → Storage → Clear data</em>.</li>
+    <li>Stop reminders: turn off notifications for Spelling IQ in Android settings.</li>
+    <li>Limit ad tracking: reset or delete your advertising ID as described in section 4.</li>
+    <li>Remove ads: buy PRO.</li>
+  </ul>
+  <p>Depending on where you live (for example under India's Digital Personal Data Protection Act, 2023, the EU/UK GDPR or US state laws), you may have rights to access, correct or delete personal data and to withdraw consent. Because we do not hold your App data on our servers, most requests are handled by the steps above. For anything else, email us and we will respond.</p>
+
+  <h2>14. Changes to this policy</h2>
+  <p>We may update this policy when the App changes. The new version will be posted on this page with a new effective date. Please check it from time to time.</p>
+
+  <h2>15. Contact</h2>
+  <p>WhiteOceanBook<br>Jaipur, Rajasthan, India<br>Email: <a href="mailto:support@whiteoceanbook.com">support@whiteoceanbook.com</a></p>
+</div>
+</main>
+</body>
+</html>
