@@ -74,7 +74,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&text=WOVocab&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&text=WOVocabFrgSpelin&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&text=IQ&display=swap" rel="stylesheet" />
 <style>
   :root {
     --paper: #F7F6F2;
@@ -367,6 +368,47 @@
   .rv-foot .mark { width: 20px; height: 20px; border-radius: 5px; font-size: 7.5px; }
   .rv-src { margin-top: 6px; font-size: 13px; color: var(--muted); text-align: center; }
 
+  /* ========== MORE APPS ========== */
+  .apps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 44px; }
+  @media (max-width: 820px) { .apps-grid { grid-template-columns: 1fr; } }
+  .app-card {
+    display: flex; align-items: flex-start; gap: 22px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 22px;
+    padding: 28px; box-shadow: var(--shadow-sm);
+    transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+  }
+  .app-card:hover { border-color: var(--line-2); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+  @media (max-width: 480px) { .app-card { flex-direction: column; padding: 24px 22px; gap: 18px; } }
+  .app-info { min-width: 0; }
+  .app-info h3 { font-family: var(--serif); font-weight: 500; font-size: 23px; line-height: 1.2; letter-spacing: -0.01em; color: var(--ink); }
+  .app-dev { font-size: 13.5px; font-weight: 600; color: var(--accent); margin-top: 4px; }
+  .app-info p { color: var(--muted); font-size: 14.5px; margin-top: 10px; line-height: 1.6; }
+  .app-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .app-meta span { font-size: 12px; font-weight: 600; color: var(--ink-2); background: var(--paper); border: 1px solid var(--line); padding: 3px 10px; border-radius: 999px; }
+  .app-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 14px; font-weight: 700; color: var(--ink); }
+  .app-link svg { width: 16px; height: 16px; transition: transform .2s ease; }
+  .app-card:hover .app-link svg { transform: translateX(3px); }
+
+  /* App icons — drawn with HTML/CSS, no images */
+  .mini-icon {
+    --s: 96px;
+    position: relative; flex-shrink: 0;
+    width: var(--s); height: var(--s); font-size: var(--s);
+    border-radius: 0.23em;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    box-shadow: 0 1px 2px rgba(26, 32, 51, 0.06), 0 10px 22px -12px rgba(26, 32, 51, 0.35);
+    user-select: none;
+  }
+  @media (max-width: 480px) { .mini-icon { --s: 84px; } }
+  .ic-frog { background: #B5F999; color: #00360F; font-family: 'Baloo 2', var(--sans); font-weight: 800; }
+  .ic-frog span { display: block; line-height: 0.78; letter-spacing: -0.02em; }
+  .ic-frog .f1 { font-size: 0.335em; }
+  .ic-frog .f2 { font-size: 0.335em; margin-top: 0.02em; }
+  .ic-spell { background: #000; color: #fff; }
+  .ic-spell .s1 { font-family: 'Baloo 2', var(--sans); font-weight: 800; font-size: 0.19em; line-height: 0.9; letter-spacing: -0.01em; }
+  .ic-spell .s2 { position: relative; font-family: 'Alfa Slab One', Georgia, serif; font-size: 0.42em; line-height: 0.95; margin-top: 0.01em; }
+  .ic-spell .s2 svg { position: absolute; top: -0.04em; right: -0.38em; width: 0.4em; height: 0.4em; }
+
   /* ========== BOOK ========== */
   .book-card {
     background: var(--ink); color: #fff; border-radius: 26px; padding: 56px 52px;
@@ -424,6 +466,7 @@
       <a href="#topics">Topics</a>
       <a href="#progress">Progress</a>
       <a href="#reviews">Reviews</a>
+      <a href="#apps">More Apps</a>
       <a href="#book">Book</a>
       <a href="#privacy">Privacy</a>
       <a href="#contact">Contact</a>
@@ -630,6 +673,46 @@
   <p class="rv-src">Reviews shown as posted on Google Play.</p>
 </section>
 
+<!-- ===== MORE APPS ===== -->
+<section id="apps">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Other apps from WhiteOceanBook</div>
+      <h2 class="section-title">More ways to <em>learn</em></h2>
+      <p class="section-intro">Two more apps from the same developer — built for the same exam aspirants, in a more playful style.</p>
+    </div>
+    <div class="apps-grid reveal">
+      <a class="app-card" href="https://play.google.com/store/apps/details?id=com.whiteoceanbook.frogvocab" target="_blank" rel="noopener">
+        <div class="mini-icon ic-frog" role="img" aria-label="FrogVocab app icon"><span class="f1">Frog</span><span class="f2">Vocab</span></div>
+        <div class="app-info">
+          <h3>FrogVocab: English Vocabulary</h3>
+          <div class="app-dev">WhiteOceanBook</div>
+          <p>Learn English words the fun way. Tap the frog to catch bees — each bee brings an easy, medium or tough word with its meaning. Covers One Word Substitution, Synonyms &amp; Antonyms, Idioms, Root Words and Phrasal Verbs.</p>
+          <div class="app-meta"><span>Contains ads</span><span>In-app purchases</span></div>
+          <span class="app-link">View on Google Play
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h11M11 5.5L15.5 10 11 14.5"/></svg>
+          </span>
+        </div>
+      </a>
+      <a class="app-card" href="https://play.google.com/store/apps/details?id=com.whiteoceanbook.spellingiq" target="_blank" rel="noopener">
+        <div class="mini-icon ic-spell" role="img" aria-label="Spelling IQ app icon">
+          <span class="s1">Spelling</span>
+          <span class="s2">IQ<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="#16A34A" stroke="#fff" stroke-width="2.4"/><path d="M7.2 12.4l3.2 3.1 6.4-6.6" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <div class="app-info">
+          <h3>Spelling IQ: Spelling Quiz</h3>
+          <div class="app-dev">WhiteOceanBook</div>
+          <p>A game-style spelling quiz. Solve short sets of 10 questions, hear the correct pronunciation, bookmark tricky words and watch your IQ Bar grow as you improve.</p>
+          <div class="app-meta"><span>Contains ads</span><span>In-app purchases</span></div>
+          <span class="app-link">View on Google Play
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h11M11 5.5L15.5 10 11 14.5"/></svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== BOOK ===== -->
 <section id="book">
   <div class="wrap">
@@ -697,7 +780,7 @@
   <div class="wrap foot-inner">
     <div class="foot-brand"><span class="mark">WO</span> WhiteOceanBook</div>
     <div>© 2026 WhiteOceanBook · All rights reserved</div>
-    <div><a href="/privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="#contact">Contact</a></div>
+    <div><a href="/privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms-of-service.html">Terms of Service</a> &nbsp;·&nbsp; <a href="#contact">Contact</a></div>
   </div>
 </footer>
 
